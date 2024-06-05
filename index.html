@@ -17,7 +17,7 @@
               <h2 class="visually-hidden">Форма поиска по сайту</h2>
               <div class="site-search-input-focus-wrapper">
                 <label class="visually-hidden" for="site-search-input">Поле для ввода текста поиска</label>
-                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Текст поиска" required>
+                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Поиск по сайту" required>
               </div>
               <div class="site-search-button-focus-wrapper">
                 <button class="site-search-button" type="submit">Найти</button>
@@ -31,12 +31,6 @@
             </section>
             <section class="cart-navigation">
               <h2 class="visually-hidden">Навигация для корзины</h2>
-              <div class="cart-navigation-item">
-                <a class="cart-navigation-link compare" href="#">Сравнить</a>
-              </div>
-              <div class="cart-navigation-item">
-                <a class="cart-navigation-link compare" href="#">Сравнить</a>
-              </div>
               <div class="cart-navigation-item">
                 <a class="cart-navigation-link compare" href="#">Сравнить</a>
               </div>
@@ -115,12 +109,6 @@
                 </li>
                 <li class="main-menu-item">
                   <a class="main-menu-link active" href="#">Гарантия</a>
-                </li>
-                <li class="main-menu-item">
-                  <a class="main-menu-link" href="#">Контакты</a>
-                </li>
-                <li class="main-menu-item">
-                  <a class="main-menu-link" href="#">Контакты</a>
                 </li>
                 <li class="main-menu-item">
                   <a class="main-menu-link" href="#">Контакты</a>
@@ -411,6 +399,38 @@
           </div>
         </section>
       </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal">
+        <section class="modal-header">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </section>
+        <section class="modal-content">
+          <form class="modal-delivery-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="delivery-form name">
+              <label for="name_in" class="modal-label">Ваше имя:</label>
+              <input type="text" name="name_in" id="name_in" value="" class="modal-input" required placeholder="Введите имя">
+              <p class="field-info error">Добавьте имя</p>
+            </div>
+            <div class="delivery-form mail">
+              <label for="mail_in" class="modal-label">Ваше e-mail:</label>
+              <input type="text" name="mail_in" id="mail_in" value="" class="modal-input" required placeholder="почта">
+              <p class="field-info error">Забавный у вас адрес</p>
+            </div>
+            <div class="delivery-form order">
+              <label for="order_in" class="modal-label">Ваше e-mail:</label>
+              <input type="text" name="order_in" id="order_in" value="" class="modal-input error" required placeholder="В свободной форме">
+              <p class="field-info error">Забавный у вас адрес</p>
+            </div>
+            <div class="delivery-form count">
+            </div>
+            <a class="button-fade contacts-button" href="#">Отправить</a>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
