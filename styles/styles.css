@@ -2057,13 +2057,12 @@ input.subscription-form-input::placeholder {
 }
 
 .field-icon {
+  display: inline-block;
   position: absolute;
-  display: flex;
-  align-items: center;
   top: 0;
-  bottom: 0;
-  right: 1.15rem;
-  width: 1rem;
+  right: 0;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 
@@ -2074,17 +2073,40 @@ input.subscription-form-input::placeholder {
 }
 
 .delivery-form.name .modal-input:focus + .field-icon,
-.modal-input:not(:placeholder-shown) + .field-icon {
+.delivery-form.name .modal-input:not(:placeholder-shown) + .field-icon {
   background-image: url("../images/icons/letter-default.svg");
 }
 
 .delivery-form.name .modal-input:active + .field-icon,
-.modal-input:not(:placeholder-shown) + .field-icon {
+.delivery-form.name .modal-input:not(:placeholder-shown) + .field-icon {
   background-image: url("../images/icons/letter-default.svg");
 }
 
 .delivery-form.name .modal-input:active + .field-icon,
 .delivery-form.name .modal-input:hover + .field-icon {
+  background-image: url("../images/icons/letter-hover.svg");
+}
+
+/*******/
+
+.delivery-form.mail .field-icon {
+  background-image: url("../images/icons/letter-active.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.delivery-form.mail .modal-input:focus + .field-icon,
+.delivery-form.mail .modal-input:not(:placeholder-shown) + .field-icon {
+  background-image: url("../images/icons/letter-default.svg");
+}
+
+.delivery-form.mail .modal-input:active + .field-icon,
+.delivery-form.mail .modal-input:not(:placeholder-shown) + .field-icon {
+  background-image: url("../images/icons/letter-default.svg");
+}
+
+.delivery-form.mail .modal-input:active + .field-icon,
+.delivery-form.mail .modal-input:hover + .field-icon {
   background-image: url("../images/icons/letter-hover.svg");
 }
 
