@@ -412,18 +412,24 @@
           <form class="modal-delivery-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="delivery-form name">
               <label for="name_in" class="modal-label">Ваше имя:</label>
-              <input type="text" name="name_in" id="name_in" value="" class="modal-input" required placeholder="Введите имя">
-              <p class="field-info error">Добавьте имя</p>
+              <div class="text-field-icon">
+                <input type="text" name="name_in" id="name_in" value="" class="modal-input" required placeholder="Введите имя">
+                <span class="field-icon"></span>
+                <p class="field-info error hide">Добавьте имя</p>
+              </div>
             </div>
             <div class="delivery-form mail">
               <label for="mail_in" class="modal-label">Ваше e-mail:</label>
-              <input type="text" name="mail_in" id="mail_in" value="" class="modal-input" required placeholder="почта">
-              <p class="field-info error">Забавный у вас адрес</p>
+              <div class="text-field-icon">
+                <input type="text" name="mail_in" id="mail_in" value="" class="modal-input" required placeholder="почта">
+                <span class="field-icon"></span>
+                <p class="field-info error">Забавный у вас адрес</p>
+              </div>
             </div>
             <div class="delivery-form order">
               <label for="order_in" class="modal-label">Ваше e-mail:</label>
-              <input type="text" name="order_in" id="order_in" value="" class="modal-input error" required placeholder="В свободной форме">
-              <p class="field-info error">Забавный у вас адрес</p>
+              <input type="text" name="order_in" id="order_in" value="" class="modal-input" required placeholder="В свободной форме">
+              <p class="field-info error hide">Забавный у вас адрес</p>
             </div>
             <div class="delivery-form count">
             </div>
