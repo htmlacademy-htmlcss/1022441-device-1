@@ -1907,7 +1907,7 @@ input.subscription-form-input::placeholder {
 /***** Page Footer End *****/
 
 
-/* Modal window */
+/****** Modal window *******/
 
 .modal-container {
   display: flex;
@@ -2117,8 +2117,6 @@ input.subscription-form-input::placeholder {
   opacity: 30%;
 }
 
-/*******/
-
 .delivery-form.mail .field-icon {
   background-image: url("../images/icons/letter-active.svg");
   background-position: right center;
@@ -2144,7 +2142,6 @@ input.subscription-form-input::placeholder {
   background-image: url("../images/icons/letter-active.svg");
   opacity: 30%;
 }
-
 
 .modal-label {
   display: block;
@@ -2305,4 +2302,4 @@ input.subscription-form-input::placeholder {
   grid-row: 3 / 4;
 }
 
-
+/****** Modal window end *******/
