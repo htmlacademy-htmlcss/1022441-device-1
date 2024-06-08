@@ -2197,8 +2197,8 @@ input.subscription-form-input::placeholder {
 
 .product-info-popup {
   position: absolute;
-  top: 10px;
-  left: -18px;
+  top: 11px;
+  left: -39px;
   display: none;
   z-index: 1;
   background: #000000;
@@ -2218,11 +2218,11 @@ input.subscription-form-input::placeholder {
 .product-info-popup:before {
   display: block;
   position: absolute;
-  top: -19px;
+  top: -17px;
   box-sizing: border-box;
-  right: 33px;
+  right: 37px;
   content: ' ';
-  border-color: transparent transparent #333333 transparent;
+  border-color: transparent transparent #000000 transparent;
   border-style: solid;
   border-width: 11px;
 }
