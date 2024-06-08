@@ -1941,6 +1941,7 @@ input.subscription-form-input::placeholder {
 
 .modal-content {
   margin: 38px 0 0 0;
+  padding-bottom: 2px;
 }
 
 .modal-title {
@@ -1986,7 +1987,7 @@ input.subscription-form-input::placeholder {
   width: 760px;
   grid-template-columns: 180px auto 180px 40px 180px auto 180px;
   grid-template-rows: min-content min-content 40px;
-  row-gap: 42px;
+  row-gap: 39px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2018,6 +2019,12 @@ input.subscription-form-input::placeholder {
 .delivery-form.count {
   grid-column: 7 / 8;
   grid-row: 2 / 3;
+}
+
+.delivery-form.send {
+  margin-top: 4px;
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .modal-input {
@@ -2057,6 +2064,12 @@ input.subscription-form-input::placeholder {
   padding: 18px 18px 18px 18px;
   border: 2px solid #FF3D3D;
   outline: none;
+}
+
+.modal-input:disabled  {
+  background-color: #F0F0F0;
+  opacity: 30%;
+  cursor: not-allowed;
 }
 
 .modal-input::placeholder {
@@ -2099,6 +2112,11 @@ input.subscription-form-input::placeholder {
   background-image: url("../images/icons/login-hover.svg");
 }
 
+.delivery-form.name .modal-input:disabled + .field-icon {
+  background-image: url("../images/icons/login-active.svg");
+  opacity: 30%;
+}
+
 /*******/
 
 .delivery-form.mail .field-icon {
@@ -2120,6 +2138,11 @@ input.subscription-form-input::placeholder {
 .delivery-form.mail .modal-input:active + .field-icon,
 .delivery-form.mail .modal-input:hover + .field-icon {
   background-image: url("../images/icons/letter-hover.svg");
+}
+
+.delivery-form.mail .modal-input:disabled + .field-icon {
+  background-image: url("../images/icons/letter-active.svg");
+  opacity: 30%;
 }
 
 
@@ -2206,7 +2229,7 @@ input.subscription-form-input::placeholder {
 
 .count-info {
   display: grid;
-  grid-template-columns: 119px 60px;
+  grid-template-columns: 120px 60px;
 }
 
 .count-field {
