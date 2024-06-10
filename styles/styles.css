@@ -2312,7 +2312,7 @@ input.subscription-form-input::placeholder {
 
 /****** Catalog ******/
 
-.catalog {
+.product-catalog {
   background-color: #F0F0F0;
 }
 
@@ -2724,7 +2724,7 @@ input.subscription-form-input::placeholder {
 /******* Catalog List **********/
 
 .catalog-list-wrapper {
-  padding: 0;
+  padding-bottom: 78px;
   background-color: #ffffff;
 }
 
@@ -2930,15 +2930,15 @@ input.subscription-form-input::placeholder {
 
 .pagination-container {
   display: flex;
-  max-width: 876px;
   box-sizing: border-box;
-  padding: 0 70px 25px 73px;
+  max-width: 760px;
+  background-color: #EBEBEB;
+  margin: 0 auto;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   flex-grow: 1;
   margin: 0;
   padding: 0;
@@ -2950,65 +2950,60 @@ input.subscription-form-input::placeholder {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 2px;
-  background-color: #3D546F;
-  align-self: start;
+  background-color: transparent;
+  align-self: center;
 }
 
 .pagination-item:hover {
-  background-color: #32425C;
+  background-color: transparent;
 }
 
 .pagination-item:active {
-  background-color: #32425C;
+  background-color: transparent;
 }
 
 .pagination-item:focus-within {
-  background-color: #32425C;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
+  background-color: transparent;
 }
 
 .pagination-link {
   display: block;
   box-sizing: border-box;
   text-align: center;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  text-transform: uppercase;
+  line-height: 16px;
   text-decoration: none;
-  color: #ffffff;
-  padding: 10px 21px 11px 20px;
+  color: rgba(68, 68, 68, 0.3);
+  width: 40px;
+  padding: 13px 0 11px 0;
 }
 
 .pagination-link:focus {
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
+  outline: 2px solid #AF4FFF;
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .pagination-link:hover {
-  color: #c5c5c5;
+  color: rgba(68, 68, 68, 1);
 }
 
 .pagination-link:active {
-  color: #ffffff;
+  color: rgba(68, 68, 68, 0.1);
 }
 
 .pagination-item.current {
-  background-color: #ffffff;
-  color: #3d546f;
+  color: rgba(68, 68, 68, 0.6);
 }
 
 .pagination-item.current:focus-within {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 
 .pagination-item.current .pagination-link,
 .pagination-item.current:focus-within .pagination-link{
-  color: #3d546f;
+  color: rgba(68, 68, 68, 0.6);
   cursor: not-allowed;
 }
 
@@ -3016,162 +3011,29 @@ input.subscription-form-input::placeholder {
   background-color: transparent;
 }
 
-.pagination-item .button-more {
-  display: block;
-  font-size: 14px;
-  color: #ffffff;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 14px 36px 13px 38px;
-  border-radius: 2px;
-  margin-left: 9px;
+.pagination-item-button {
+  background-color: #AF4FFF;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
 }
 
+.pagination-item-button.prev {
+  width: 128px;
+  padding: 20px 0;
+  margin-right: auto;
+}
+
+.pagination-item-button.next {
+  width: 141px;
+  margin-left: auto;
+}
+
+.pagination-item-link {
+  display: block;
+}
 /******* Catalog Pagination End **********/
 
 /****** Catalog End ******/
 
-
-
-
-
-/*.catalog-container {
-  position: relative;
-  box-sizing: border-box;
-  width: 1160px;
-  margin: 0 auto;
-  color: inherit;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 320px 840px;
-}
-
-.catalog-filter {
-  grid-area: filter;
-  min-height: 400px;
-  background-color: #FFC700;
-}
-
-.catalog-list {
-  grid-area: cards;
-  min-height: 600px;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 360px);
-  column-gap: 40px;
-  row-gap: 44px;
-  padding: 44px 40px 78px 40px;
-}
-
-.catalog-card {
-  list-style: none;
-  box-sizing: border-box;
-  margin: 0;
-}
-.catalog-card-image {
-  display: block;
-  width: 360px;
-  height: 380px;
-  background: #D9D9D9;
-}
-.catalog-card-details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 32px 0 0 0;
-}
-
-
-.catalog-card-title {
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 226px;
-  color: #000000;
-  font-family: 'Rubik', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -2px;
-}
-
-.catalog-card-price {
-  display: block;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1;
-  white-space: nowrap;
-  text-align: right;
-  color: #444444;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-
-
-.catalog-pagination {
-  list-style: none;
-  box-sizing: border-box;
-  grid-column: span 2;
-  height: 71px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  gap: 182px;
-  background: #EBEBEB;
-}
-
-.catalog-pages-buttons {
-  display: flex;
-  flex-direction: row;
-}
-
-.catalog-pager-page {
-  list-style: none;
-}
-
-.catalog-pager-button {
-}
-
-.catalog-pager-back-button,
-.catalog-pager-forward-button {
-  background: #EBEBEB;
-  height: 71px;
-  padding: 0 25px;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.catalog-pager-page button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  width: 40px;
-  height: 40px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
- */
-
-/****** Catalog end *******/
