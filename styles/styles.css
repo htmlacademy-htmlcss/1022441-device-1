@@ -2738,22 +2738,20 @@ input.subscription-form-input::placeholder {
 
 .catalog-item {
   position: relative;
-  display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .product-card {
+  display: block;
   position: relative;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 20px;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
+  color: #000000;
+  text-decoration: none;
 }
 
 .product-card-content {
@@ -2788,8 +2786,40 @@ input.subscription-form-input::placeholder {
   z-index: 100;
 }
 
-.catalog-item.new {
-  overflow: hidden;
+.catalog-item .more-button {
+  position: absolute;
+  top: 186px;
+  left: 70px;
+  z-index: 300;
+}
+
+.product-card-title {
+  grid-column: 1;
+  grid-row: 2;
+  display: block;
+  font-family: inherit;
+  font-weight: 700;
+  color: #000000;
+  opacity: 100%;
+  text-decoration: none;
+  text-align: left;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.product-card-price {
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  color: #000000;
+  opacity: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: right;
+  text-decoration: none;
 }
 
 .product-card-foreground {;
@@ -2799,17 +2829,38 @@ input.subscription-form-input::placeholder {
 }
 
 .product-card:hover .product-card-foreground {
-  display: flex;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 360px;
-  min-height: 452px;
-  background-color: rgba(240, 240, 240, 0.6);
+  min-height: 380px;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 200;
 }
 
-.product-card-foreground .more-button {
-  margin: 186px 0 0 70px;
+.product-card:focus-within,
+.product-card.new:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.product-card:focus .product-card-title,
+.product-card:focus .product-card-price {
+  color: #000000;
+  opacity: 100%;
+}
+
+.product-card:hover .product-card-title,
+.product-card:hover .product-card-price {
+  color: #444444;
+  opacity: 80%;
+}
+
+.product-card:active .product-card-title,
+.product-card:active .product-card-price {
+  color: #444444;
+  opacity: 30%;
 }
 
 .product-card-image {
@@ -2821,32 +2872,6 @@ input.subscription-form-input::placeholder {
   height: 380px;
   box-sizing: border-box;
   background-color: #F0F0F0;
-}
-
-.product-card-title {
-  grid-column: 1;
-  grid-row: 2;
-  display: block;
-  font-family: inherit;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-  text-align: left;
-  box-sizing: border-box;
-  outline: none;
-}
-
-.product-card-price {
-  grid-column: 2;
-  grid-row: 2;
-  color: #000000;
-  font-family: 'Rubik', sans-serif;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  text-align: right;
-  text-decoration: none;
 }
 
 
