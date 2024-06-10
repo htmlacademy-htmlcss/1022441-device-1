@@ -2734,6 +2734,7 @@ input.subscription-form-input::placeholder {
   column-gap: 40px;
   row-gap: 44px;
   padding: 70px 40px 0 40px;
+  margin: 0;
 }
 
 .catalog-item {
@@ -2933,7 +2934,7 @@ input.subscription-form-input::placeholder {
   box-sizing: border-box;
   max-width: 760px;
   background-color: #EBEBEB;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
 }
 
 .pagination {
@@ -3012,7 +3013,7 @@ input.subscription-form-input::placeholder {
 }
 
 .pagination-item-button {
-  background-color: #AF4FFF;
+  background-color: rgba(235, 235, 235, 1);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3021,17 +3022,37 @@ input.subscription-form-input::placeholder {
 
 .pagination-item-button.prev {
   width: 128px;
-  padding: 20px 0;
   margin-right: auto;
+  text-align: left;
 }
 
 .pagination-item-button.next {
   width: 141px;
   margin-left: auto;
+  text-align: right;
 }
 
 .pagination-item-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
   display: block;
+  padding: 21px 0 20px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pagination-item-button.prev .pagination-item-link {
+  padding-left: 26px;
+}
+
+.pagination-item-button.next .pagination-item-link {
+  padding-right: 26px;
+}
+
+.pagination-item-link:hover {
+  background-color: rgba(220, 220, 220, 1);
 }
 /******* Catalog Pagination End **********/
 
