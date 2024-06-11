@@ -2721,34 +2721,115 @@ input.subscription-form-input::placeholder {
 .catalog-sorting-set {
   width: 100%;
   background-color: #F0F0F0;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.catalog-sorting-label {
+  margin-left: 40px;
+  margin-right: auto;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog-sorting-buttons{
+  margin-left: auto;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.catalog-sorting-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+
+.catalog-sorting-button:before {
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  opacity: 0.2;
+}
+
+.catalog-sorting-button:hover:before {
+  opacity: 0.5;
+}
+
+.catalog-sorting-button:active:before {
+  opacity: 1;
+}
+
+.catalog-sorting-button:focus {
+  outline: 2px #AF4FFF solid;
+  z-index: 3;
+}
+
+.catalog-sorting-button.up:before {
+  background-image: url("../images/icons/tria-up.svg");
+}
+
+.catalog-sorting-button.down:before {
+  background-image: url("../images/icons/tria-down.svg");
 }
 
 .sorting-select {
-  width: 280px;
+  width: unset; /*280px;*/
+}
+
+.select-control:focus {
+  opacity: 1;
 }
 
 .select-control {
-  height: 40px;
+  height: 30px;
   max-width: 100%;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  border: 1px solid #3D546F;
-  border-radius: 2px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  border: none;
   outline: none;
-  color: #293449;
   margin: 0;
-  padding: 4px 42px 4px 15px;
+  padding: 0 33px 0 0;
   box-shadow: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #FFFFFF;
-  background-image: url("../images/icons/down-dir.svg"), linear-gradient(to bottom, #ffffff 0%,#ffffff 100%);
+  background-color: #F0F0F0;
+  background-image: url("../images/icons/dir-down.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 11px top 50%, 0 0;
   background-size: 10px auto, 100%;
+}
+
+.select-control option {
+  padding: 10px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
 }
 
 .select-control::-ms-expand {
@@ -2756,23 +2837,23 @@ input.subscription-form-input::placeholder {
 }
 
 .select-control:focus {
-  border-color: #FFBF47;
-  box-shadow: none;
-  outline: 1px solid #FFBF47;
+  color: rgba(0,0,0,1);
+  outline: 2px #AF4FFF solid;
 }
 
 .select-control:hover {
-  border-color: #63A63E;
+  background-image: url("../images/icons/dir-down-60.svg");
+  color: rgba(0,0,0,0.6)
 }
 
 .select-control:active {
-  border-color: #3F5E72;
+  background-image: url("../images/icons/dir-down-30.svg");
+  color: rgba(0,0,0,0.3);
 }
 
 .select-control:disabled {
-  border-color: #E5E5E5;
-  color: rgba(0, 0, 0, 0.3);
-  background-image: url("../images/icons/down-dir.svg");
+  background-image: url("../images/icons/dir-down-10.svg");
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .select-control option {
