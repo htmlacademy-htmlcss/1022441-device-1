@@ -2309,9 +2309,78 @@ input.subscription-form-input::placeholder {
 
 /****** Modal window end *******/
 
-/****** Catalog begin *******/
+.inner-header {
+  width: 1160px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 40px 0 60px;
+}
 
-/****** Catalog ******/
+.inner-header-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Breadcrumb */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+  margin: 0;
+  padding: 0 11px 0 0;
+  list-style: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+}
+
+.breadcrumbs-link {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs-link:focus,
+.breadcrumbs-link:focus-within {
+  outline: none;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.5;
+}
+
+.breadcrumbs-item:not(:first-child) a::before {
+  display: inline-block;
+  content: ' ';
+  background-image: url("../images/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-position-x: 0;
+  width: 4px;
+  height: 10px;
+  margin-right: 16px;
+  margin-left: 5px;
+}
+
+
+/****** Catalog begin *******/
 
 .product-catalog {
   background-color: #F0F0F0;
@@ -2339,7 +2408,6 @@ input.subscription-form-input::placeholder {
   box-sizing: border-box;
   width: 320px;
   padding: 0 60px;
-  background-color: #AF4FFF;
 }
 
 .filter {
