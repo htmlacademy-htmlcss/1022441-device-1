@@ -668,6 +668,7 @@ body {
   display: grid;
   grid-template-columns: auto;
   align-self: start;
+  z-index: 101;
 }
 
 .catalog-link {
