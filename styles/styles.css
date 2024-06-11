@@ -2814,6 +2814,7 @@ input.subscription-form-input::placeholder {
 }
 
 .card-item {
+  display: block;
   position: relative;
   width: 360px;
   box-sizing: border-box;
@@ -2837,6 +2838,10 @@ input.subscription-form-input::placeholder {
   z-index: 200;
 }
 
+.product-card-image {
+  width: 360px;
+}
+
 .product-button {
   visibility: hidden;
   position: absolute;
@@ -2846,7 +2851,7 @@ input.subscription-form-input::placeholder {
 }
 
 .card-item:hover .product-card-fade,
-.card-item:hover .product-card-fade + .product-button {
+.card-item:hover .product-button {
   visibility: visible;
 }
 
@@ -2862,12 +2867,6 @@ input.subscription-form-input::placeholder {
   padding-top: 32px;
   grid-template-columns: 226px auto;
   text-decoration: none;
-}
-
-.product-card-info:focus,
-.product-card-link:focus,
-.product-card-fade:focus {
-  outline: none;
 }
 
 .product-card-title {
