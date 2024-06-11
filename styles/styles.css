@@ -117,6 +117,7 @@ body {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .services-button {
@@ -2744,10 +2745,10 @@ input.subscription-form-input::placeholder {
   list-style: none;
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column-reverse;
+.card-item {
   position: relative;
+  width: 360px;
+  box-sizing: border-box;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -2756,38 +2757,49 @@ input.subscription-form-input::placeholder {
   text-decoration: none;
 }
 
-.catalog-item.new::before,
-.product-card.new::before {
-  content: "new";
-  display: flex;
+.product-card-fade {
+  display: block;
   position: absolute;
-  padding: 0;
-  box-sizing: border-box;
-  top: 27px;
-  right: 27px;
-  width: 60px;
-  height: 60px;
-  border: 2px solid rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.6);
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background-color: transparent;
-  z-index: 100;
-  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 380px;
+  background: rgba(240, 240, 240, 0.8);
+  visibility: hidden;
+  z-index: 200;
 }
 
-.product-card-content {
+.product-button {
+  visibility: hidden;
+  position: absolute;
+  top: 178px;
+  left: 70px;
+  z-index: 200;
+}
+
+.card-item:hover .product-card-fade,
+.card-item:hover .product-card-fade + .product-button {
+  visibility: visible;
+}
+
+.card-item:focus-within,
+.catalog-item:has(a:focus-visible):focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.product-card-info {
   display: grid;
   width: 360px;
-  margin-top: 32px;
+  padding-top: 32px;
   grid-template-columns: 226px auto;
   text-decoration: none;
+}
+
+.product-card-info:focus,
+.product-card-link:focus,
+.product-card-fade:focus {
+  outline: none;
 }
 
 .product-card-title {
@@ -2819,77 +2831,48 @@ input.subscription-form-input::placeholder {
   text-decoration: none;
 }
 
-.captionEffect {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
 
-.captionEffect .product-card-image {
-  display: block;
-  width: 360px;
-  height: 380px;
-  box-sizing: border-box;
-  background-color: #F0F0F0;
-  -webkit-transition: 800ms;
-  -o-transition: 800ms;
-  transition: 800ms;
-}
-
-.captionEffect figcaption {
-  background: rgba(240, 240, 240, 0.8);
-  position: absolute;
-  -webkit-transition: 800ms;
-  -o-transition: 800ms;
-  transition: 800ms;
-  width: 100%;
-}
-
-.captionEffect[data-effect="fade-in"] figcaption {
-  top: 0;
-  left: 0;
-  height: 100%;
-  opacity: 0;
-}
-.captionEffect[data-effect="fade-in"]:hover figcaption,
-.product-card-content:hover ~ .captionEffect[data-effect="fade-in"] figcaption {
-  opacity: 1;
-}
-
-.product-card-content:hover ~ .catalog-item.new::before {
-  opacity: 0.6;
-}
-
-.captionEffect figcaption .more-product-button {
-  margin: 168px 0 0 70px;
-}
-
-
-.product-card:focus-within,
-.product-card.new:focus-within {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
-.product-card:focus .product-card-title,
-.product-card:focus .product-card-price {
+.card-item:focus .product-card-title,
+.card-item:focus .product-card-price {
   color: #000000;
   opacity: 100%;
 }
 
-.product-card:hover .product-card-title,
-.product-card:hover .product-card-price {
+.card-item:hover .product-card-title,
+.card-item:hover .product-card-price {
   color: #444444;
   opacity: 80%;
 }
 
-.product-card:active .product-card-title,
-.product-card:active .product-card-price {
+.card-item:active .product-card-title,
+.card-item:active .product-card-price {
   color: #444444;
   opacity: 30%;
 }
 
+.catalog-item.new-item::before {
+  content: "new";
+  display: flex;
+  position: absolute;
+  padding: 0;
+  box-sizing: border-box;
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  z-index: 100;
+  color: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
 
 /******* Catalog List End **********/
 
