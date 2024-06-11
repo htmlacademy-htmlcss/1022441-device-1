@@ -2313,7 +2313,7 @@ input.subscription-form-input::placeholder {
   width: 1160px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 40px 0 60px;
+  padding: 36px 40px 34px 60px;
 }
 
 .inner-header-title {
@@ -2330,7 +2330,7 @@ input.subscription-form-input::placeholder {
 .breadcrumbs {
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 15px 0 0 0;
   padding: 0;
   flex-wrap: wrap;
 }
