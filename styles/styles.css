@@ -684,6 +684,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  z-index:10;
 }
 
 .catalog-link:focus {
@@ -730,12 +731,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(max-content, 182px));
   width: 1160px;
   box-sizing: border-box;
-  padding: 8px 60px 40px 60px;
+  padding: 13px 60px 40px 60px;
   column-gap: 30px;
   position: absolute;
-  top: 55px;
+  top: 50px;
   left: -60px;
-  z-index: 112;
+  z-index: 9;
   background-color: #FFE17F;
 }
 
