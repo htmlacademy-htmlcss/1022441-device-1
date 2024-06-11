@@ -2898,7 +2898,6 @@ input.subscription-form-input::placeholder {
   text-decoration: none;
 }
 
-
 .card-item:focus .product-card-title,
 .card-item:focus .product-card-price {
   color: #000000;
