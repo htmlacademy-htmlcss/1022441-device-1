@@ -120,10 +120,6 @@ body {
   overflow-wrap: break-word;
 }
 
-.services-button {
-  padding: 7px 18px 8px 18px;
-}
-
 .button-fade {
   z-index: 0;
   width: 220px;
@@ -1191,11 +1187,13 @@ body {
 
 .services-button {
   width: 160px;
+  padding: 7px 18px 8px 18px;
   box-sizing: border-box;
   text-decoration: none;
 }
 
 .services-navigation-item.current .services-button {
+  width: 280px;
   background-color: #000000;
   color: #FFE17F;
 }
@@ -2928,6 +2926,11 @@ input.subscription-form-input:not(:placeholder-shown) {
   width: 360px;
 }
 
+.product-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .product-button {
   visibility: hidden;
   position: absolute;
@@ -2936,13 +2939,12 @@ input.subscription-form-input:not(:placeholder-shown) {
   z-index: 200;
 }
 
-.card-item:hover .product-card-fade,
-.card-item:hover .product-button {
+.catalog-item:hover .product-card-fade,
+.catalog-item:hover .product-button {
   visibility: visible;
 }
 
-.card-item:focus-within,
-.catalog-item:has(a:focus-visible):focus-within {
+.catalog-item:has(*:focus) .card-item {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
