@@ -2550,21 +2550,33 @@ input.subscription-form-input:not(:placeholder-shown) {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 18px;
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
 }
+
 .min-price::placeholder,
 .max-price::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
-.input-control:focus,
-.input-control:hover,
-.input-control:active {
+
+.min-price:not(:placeholder-shown),
+.max-price:not(:placeholder-shown) {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.min-price:focus,
+.max-price:focus {
   outline: 2px solid #AF4FFF;
 }
+
+.min-price:hover::placeholder,
+.max-price:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /******* Range Control End ********/
 
 /******* Checkbox Control ********/
