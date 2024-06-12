@@ -1603,7 +1603,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   align-self: center;
   padding: 1px 0 0 32px;
   margin: 0 0 0 188px;
-  background-image: url("../images/icons/tick.svg");
+  background-image: url("../images/icons/tick-green.svg");
   background-repeat: no-repeat;
   background-position-x: 0;
   background-position-y: 8px;
@@ -2407,6 +2407,21 @@ input.subscription-form-input:not(:placeholder-shown) {
   text-transform: uppercase;
 }
 
+.catalog-filters-title {
+  padding: 25px 0 8px 60px;
+  width: 100%;
+  height: 69px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .catalog-form-filters {
   box-sizing: border-box;
   width: 320px;
@@ -2425,62 +2440,87 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .filter-title {
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
+  font-family: 'Rubik';
+  font-style: normal;
   font-weight: 700;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
   color: #000000;
-  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 2px #000000 solid;
+  padding: 12px 0 20px 0;
+  margin: 0 2px;
 }
 
 /******* Range Control ********/
+.range-controls-wrapper {
+  margin: 0 -9px;
+  padding: 0 9px;
+  width: 200px;
+}
+
 .range-controls {
   position: relative;
-  min-height: 40px;
+  min-height: 18px;
   box-sizing: border-box;
-  margin-bottom: 6px;
-  padding: 18px 20px 18px 20px;
-  background-color: #F7F3EC;
+  margin: 0;
+  padding: 8px 0;
   border-radius: 2px;
 }
 
 .scale-bar {
   height: 2px;
-  background-color: #3D546F;
+  background-color: #DCDCDC;
 }
 
 .scale-bar-active {
   height: 2px;
   width: 83%;
-  background-color: #5FBB2D;
+  background-color: #000000;
 }
 
 .tumbler {
   position: absolute;
-  top: 9px;
+  top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
-  margin: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0 -9px;
   padding: 0;
-  background-color: #FFFFFF;
-  border: 2px solid #3D546F;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tumbler:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #EBEBEB;
+  border: 2px solid #000000;
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .tumbler:focus {
-  outline: none;
-  background-color: #5FBB2D;
+  outline: 2px #AF4FFF solid;
+  outline-offset: 2px;
 }
 
-.tumbler:hover {
-  background-color: #518534;
+.tumbler:hover:before {
+  border-color: #797979;
+  background-color: #EEEEEE;
 }
 
-.tumbler:active {
-  background-color: #5FBB2D;
+.tumbler:active:before {
+  border-color: #000000;
+  background-color: #000000;
 }
 
 .tumbler-min {
@@ -2492,206 +2532,241 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .price-range .filter-title {
-  margin: 0 0 10px 0;
-  padding: 0;
+  margin: 0 0 20px 0;
+  padding-bottom: 0;
 }
 
 .price-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 10px;
 }
 
 .min-price,
 .max-price {
-  width: 47px;
-  height: 20px;
-  padding: 10px 24px;
-  margin: 0;
-  border: 0;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: center;
-  background-color: #F7F3EC;
-  border-radius: 2px;
+  margin-top: 3px;
+  height: 18px;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
-
+.min-price::placeholder,
+.max-price::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
 .input-control:focus,
 .input-control:hover,
 .input-control:active {
-  outline: 1px solid #3D546F;
+  outline: 2px solid #AF4FFF;
 }
 /******* Range Control End ********/
 
 /******* Checkbox Control ********/
 
-.manufacturers .filter-title {
-  margin: 0 0 16px -1px;
-}
-
-.filter.manufacturers {
+.filter.colors {
   margin: 0 0 25px 0;
 }
 
-.manufacturers-list {
-  margin: 0;
+.colors-list {
+  margin: 0 0 0 2px;
   padding: 0;
 }
 
-.manufacturers-list-item {
+.colors-list-item {
   list-style: none;
-  margin: 0 0 18px 0;
+  margin: 0 0 14px 0;
   padding: 0 0 3px 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
 }
 
-.manufacturers-list-item-control {
+.colors-list-item-control {
   position: relative;
   display: block;
   padding: 0 0 0 36px;
 }
 
 .control-mark {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
+}
+
+.control-mark:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
   border-radius: 2px;
-  background-color: #FFFFFF;
-  border: 2px solid #3D546F;
+  background-color: transparent;
+  border: 2px solid #000000;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.control-label {
-  display: inline-block;
-  padding: 1px 0 0 0;
+.control-input[type="checkbox"]:checked + .control-mark:before {
+  background-image: url("../images/icons/tick-black.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
 }
 
-.manufacturers-list-item-control:focus .control-mark {
+.control-input[type="checkbox"]:focus + .control-mark {
+  outline: 2px #AF4FFF solid;
+  outline-offset: 2px;
+}
+
+.control-label {
+  display: inline-block;
+  padding: 0;
+}
+
+.colors-list-item-control:focus .control-mark {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.manufacturers-list-item-control:hover .control-mark {
-  border-color: rgba(50, 66, 92, 0.6);
+.colors-list-item-control:hover .control-mark:before,
+.colors-list-item-control:hover .control-label {
+  opacity: 0.6;
 }
 
-.manufacturers-list-item-control:active .control-mark {
-  border-color: rgba(50, 66, 92, 0.6);
+.colors-list-item-control:active .control-mark:before,
+.colors-list-item-control:active .control-label {
+  opacity: 0.3;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
-  background-image: url("../images/icons/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border: none;
-}
-
-.control-input[type="checkbox"]:checked:hover + .control-mark {
-  background-image: url("../images/icons/checkbox-on-hover.svg");
-}
-
-.control-input[type="checkbox"]:disabled + .control-mark {
-  background-image: url("../images/icons/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border: none;
-}
-
-.control-input[type="checkbox"]:disabled:checked + .control-mark {
-  background-image: url("../images/icons/checkbox-on-disabled.svg");
-}
-
+.control-input[type="checkbox"]:disabled + .control-mark:before,
 .control-input[type="checkbox"]:disabled + .control-mark + .control-label {
-  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.1;
 }
+
 /******* Checkbox Control End ********/
 
 /******* Radio Control ********/
 
-.filter.supply {
+.filter.bluetooth {
   margin: 0 0 27px 0;
 }
 
-.supply .filter-title {
-  margin: 0 0 18px 3px;
+.bluetooth .filter-title {
+  margin: 0 0 0 2px;
 }
 
-.supply-list {
-  margin: 0 0 0 5px;
+.bluetooth-list {
+  margin: 0 0 0 2px;
   padding: 0;
 }
 
-.supply-list-item {
+.bluetooth-list-item {
   list-style: none;
   margin: 0 0 18px 0;
   padding: 0 0 2px 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
 }
 
-.supply-list-item-control {
+.bluetooth-list-item-control {
   position: relative;
   display: block;
   padding: 0 0 0 36px;
 }
 
-.supply-list-item-control .control-label {
-  padding: 2px 0 0 0;
+.bluetooth-list-item-control .control-label {
+  padding: 0;
 }
 
 .control-mark-radio {
   position: absolute;
   top: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 2px;
-  background-color: #FFFFFF;
-  border: 2px solid #32425C;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.control-input[type="radio"] + .control-mark-radio {
-  border-radius: 50%;
+.control-input[type="radio"]:focus + .control-mark-radio {
+  outline: 2px #AF4FFF solid;
+  outline-offset: 2px;
 }
 
-.control-input[type="radio"]:checked + .control-mark-radio::before {
+.control-input[type="radio"] + .control-mark-radio::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 8px;
-  height: 8px;
-  background-color: #3D546F;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #000000;
   border-radius: 50%;
 }
 
-.supply-list-item-control:focus .control-mark-radio,
-.supply-list-item-control:hover .control-mark-radio,
-.supply-list-item-control:active .control-mark-radio,
-.control-input[type="radio"]:disabled + .control-mark-radio {
-  border-color: rgba(61, 84, 111, 1);
-  background: rgba(255, 255, 255, 1);
+.control-input[type="radio"]:checked + .control-mark-radio::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
 }
 
-.control-input[type="radio"]:disabled + .control-mark-radio + .control-label {
-  color: rgba(0, 0, 0, 0.4);
+.bluetooth-list-item-control:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.bluetooth-list-item-control:hover .control-input[type="radio"] + .control-mark-radio::before,
+.bluetooth-list-item-control:hover .control-input[type="radio"]:checked + .control-mark-radio::after {
+  opacity: 0.6;
+}
+
+.bluetooth-list-item-control:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.bluetooth-list-item-control:active .control-input[type="radio"] + .control-mark-radio::before,
+.bluetooth-list-item-control:active .control-input[type="radio"]:checked + .control-mark-radio::after {
+  opacity: 0.3;
+}
+
+.bluetooth-list-item-control:has(.control-input[type="radio"]:disabled) {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.bluetooth-list-item-control .control-input[type="radio"]:disabled + .control-mark-radio:before,
+.bluetooth-list-item-control .control-input[type="radio"]:checked:disabled + .control-mark-radio:after {
+  opacity: 0.1;
 }
 
 /******* Radio Control End ********/

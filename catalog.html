@@ -137,83 +137,83 @@
           <h2 class="visually-hidden">Каталог товаров</h2>
           <div class="catalog-container">
             <div class="catalog-filters">
+            <div class="catalog-filters-title">Фильтр:</div>
             <form class="catalog-form-filters" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter price-range">
-                <legend class="filter-title">Цена:</legend>
+                <legend class="filter-title">Стоимость:</legend>
                 <div class="range-controls-wrapper">
                   <div class="range-controls">
                     <div class="scale-bar">
-                      <div class="scale-bar-active" style="width: 41%; margin-left: 9%"></div>
+                      <div class="scale-bar-active" style="width: 60%; margin-left: 0%"></div>
                     </div>
-                    <div class="tumbler tumbler-min" style="left: 9%"></div>
-                    <div class="tumbler tumbler-max" style="left: 41%"></div>
+                    <button type="button" class="tumbler tumbler-min" style="left: 0%"></button>
+                    <button type="button" class="tumbler tumbler-max" style="left: 60%"></button>
                   </div>
                   <div class="price-controls">
                     <label for="min-price" class="visually-hidden">Ползунок для нижнего порога цены</label>
-                    <input id="min-price" class="min-price input-control" type="text" name="min-price" value="0">
-                    <span>—</span>
+                    <input id="min-price" class="min-price input-control" type="text" name="min-price" placeholder="от 0" required>
                     <label for="max-price" class="visually-hidden">Ползунок для верхнего порога цены</label>
-                    <input id="max-price" class="max-price input-control" type="text" name="max-price" value="30000">
+                    <input id="max-price" class="max-price input-control" type="text" name="max-price" placeholder="до 5000" required>
                   </div>
                 </div>
               </fieldset>
 
-              <fieldset class="filter manufacturers">
-                <legend class="filter-title">Производители</legend>
-                <ul class="manufacturers-list">
-                  <li class="manufacturers-list-item">
-                    <label class="manufacturers-list-item-control">
-                      <input class="visually-hidden control-input" type="checkbox" name="bosh" checked>
+              <fieldset class="filter colors">
+                <legend class="filter-title">Цвет</legend>
+                <ul class="colors-list">
+                  <li class="colors-list-item">
+                    <label class="colors-list-item-control">
+                      <input class="visually-hidden control-input" type="checkbox" name="black" checked>
                       <span class="control-mark"></span>
-                      <span class="control-label">BOSCH</span>
+                      <span class="control-label">Черный</span>
                     </label>
                   </li>
-                  <li class="manufacturers-list-item">
-                    <label class="manufacturers-list-item-control">
-                      <input class="visually-hidden control-input" type="checkbox" name="interskol" disabled>
+                  <li class="colors-list-item">
+                    <label class="colors-list-item-control">
+                      <input class="visually-hidden control-input" type="checkbox" name="white">
                       <span class="control-mark"></span>
-                      <span class="control-label">ИНТЕРСКОЛ</span>
+                      <span class="control-label">Белый</span>
                     </label>
                   </li>
-                  <li class="manufacturers-list-item">
-                    <label class="manufacturers-list-item-control">
-                      <input class="visually-hidden control-input" type="checkbox" name="makita" disabled checked>
+                  <li class="colors-list-item">
+                    <label class="colors-list-item-control">
+                      <input class="visually-hidden control-input" type="checkbox" name="red" disabled checked>
                       <span class="control-mark"></span>
-                      <span class="control-label">MAKIta</span>
+                      <span class="control-label">Красный</span>
                     </label>
                   </li>
-                  <li class="manufacturers-list-item">
-                    <label class="manufacturers-list-item-control">
-                      <input class="visually-hidden control-input" type="checkbox" name="dewalt">
+                  <li class="colors-list-item">
+                    <label class="colors-list-item-control">
+                      <input class="visually-hidden control-input" type="checkbox" name="blue" disabled>
                       <span class="control-mark"></span>
-                      <span class="control-label">Dewalt</span>
+                      <span class="control-label">Синий</span>
                     </label>
                   </li>
-                  <li class="manufacturers-list-item">
-                    <label class="manufacturers-list-item-control">
-                      <input class="visually-hidden control-input" type="checkbox" name="hitachi">
+                  <li class="colors-list-item">
+                    <label class="colors-list-item-control">
+                      <input class="visually-hidden control-input" type="checkbox" name="pink">
                       <span class="control-mark"></span>
-                      <span class="control-label">Hitachi</span>
+                      <span class="control-label">Розовый</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
 
-              <fieldset class="filter supply">
-                <legend class="filter-title">Питание:</legend>
-                <ul class="supply-list">
-                  <li class="supply-list-item">
-                    <label class="supply-list-item-control">
-                      <input class="visually-hidden control-input" type="radio" name="supply-type" value="rechargeable" checked>
+              <fieldset class="filter bluetooth">
+                <legend class="filter-title">Bluetooth</legend>
+                <ul class="bluetooth-list">
+                  <li class="bluetooth-list-item">
+                    <label class="bluetooth-list-item-control">
+                      <input class="visually-hidden control-input" type="radio" name="bluetooth-present" value="yes" checked>
                       <span class="control-mark-radio"></span>
-                      <span class="control-label">Аккумуляторные</span>
+                      <span class="control-label">Есть</span>
                     </label>
                   </li>
-                  <li class="supply-list-item">
-                    <label class="supply-list-item-control">
-                      <input class="visually-hidden control-input" type="radio" name="supply-type" value="network" disabled>
+                  <li class="bluetooth-list-item">
+                    <label class="bluetooth-list-item-control">
+                      <input class="visually-hidden control-input" type="radio" name="bluetooth-present" value="no" disabled>
                       <span class="control-mark-radio"></span>
-                      <span class="control-label">Сетевые</span>
+                      <span class="control-label">Нет</span>
                     </label>
                   </li>
                 </ul>
@@ -224,7 +224,7 @@
           <div class="catalog-list-wrapper">
               <div class="catalog-sorting-set">
                 <span class="catalog-sorting-label">Сортировка:</span>
-                <select class="select-control sorting-select" aria-label="Сортировка">
+                <select name="sorting-select-control" class="select-control sorting-select" aria-label="Сортировка">
                   <option value="-1">Популярные</option>
                   <option value="popular">Option 2</option>
                   <option value="popular">Option 3</option>
