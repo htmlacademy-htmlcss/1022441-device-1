@@ -580,12 +580,18 @@ body {
   display: block;
 }
 
+.cart-info-popup-total-wrapper {
+  padding: 9px 0 13px 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #1A1A1A;
+}
+
 .cart-info-popup-total {
   display: grid;
   grid-template-columns: 140px 140px;
-  background-color: #1A1A1A;
   list-style: none;
-  margin: 9px 20px 0 20px;
+  margin: 0 20px 0 21px;
   padding: 0;
 }
 
@@ -614,7 +620,7 @@ body {
   color: #000000;
   cursor: pointer;
   background-color: #FFFFFF;
-  margin: 32px 20px 0 20px;
+  margin: 19px 20px 0 20px;
 }
 
 .popover-button:focus {
