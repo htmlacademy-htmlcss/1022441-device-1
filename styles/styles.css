@@ -2403,7 +2403,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 .catalog-filters {
   width: 320px;
   box-sizing: border-box;
-  padding-left: 45px;
+  padding-left: 47px;
 }
 
 .catalog-filters-title {
@@ -2436,7 +2436,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 .filter.price-range {
   width: 220px;
   box-sizing: border-box;
-  margin: 0 0 25px 0;
+  margin: 0 0 33px 0;
   padding: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -2598,7 +2598,13 @@ input.subscription-form-input:not(:placeholder-shown) {
 /******* Checkbox Control ********/
 
 .filter.colors {
-  margin: 0 0 25px 13px;
+  width: 220px;
+  box-sizing: border-box;
+  margin: 0 0 16px 11px;
+}
+
+.filter.colors .filter-title {
+  margin-left: 2px;
 }
 
 .colors-list {
@@ -2690,7 +2696,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 /******* Radio Control ********/
 
 .filter.bluetooth {
-  margin: 0 0 27px 13px;
+  margin: 0 0 16px 11px;
 }
 
 .bluetooth .filter-title {
@@ -2800,27 +2806,9 @@ input.subscription-form-input:not(:placeholder-shown) {
 /******* Radio Control End ********/
 
 .filter-button {
-  min-width: 220px;
-  border: 2px solid #3D546F;
-  background-color: #FFFFFF;
-  color: #32425C;
-  border-radius: 2px;
-  margin: 0 0 50px 0;
-  padding: 10px 0 8px 2px;
+  margin: 0 0 0 13px;
 }
 
-.filter-button:focus {
-  outline: none;
-  border-color: #63A63E;
-}
-
-.filter-button:hover {
-  border-color: #518534;
-}
-
-.filter-button:active {
-  border-color: #5FBB2D;
-}
 
 /******* Select Control ********/
 .catalog-sorting-set {
@@ -3055,8 +3043,8 @@ input.subscription-form-input:not(:placeholder-shown) {
 .product-card-info {
   display: grid;
   width: 360px;
-  padding-top: 32px;
-  grid-template-columns: 226px auto;
+  padding-top: 28px;
+  grid-template-columns: 220px auto;
   text-decoration: none;
 }
 
@@ -3064,14 +3052,18 @@ input.subscription-form-input:not(:placeholder-shown) {
   grid-column: 1;
   grid-row: 2;
   display: block;
-  font-family: inherit;
-  font-weight: 700;
-  color: #000000;
   opacity: 100%;
   text-decoration: none;
   text-align: left;
   box-sizing: border-box;
   outline: none;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
 }
 
 .product-card-price {
@@ -3145,13 +3137,18 @@ input.subscription-form-input:not(:placeholder-shown) {
   padding: 12px 12px 12px 17px;
   margin: 0;
   outline: none;
-  font-size: 18px;
-  color: #000000;
-  line-height: 21px;
   border: 3px solid #E5E5E5;
   background-color: #FFFFFF;
   width: 100%;
   height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .download-more-button:focus {
@@ -3233,7 +3230,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   text-decoration: none;
   color: rgba(68, 68, 68, 0.3);
   width: 40px;
-  padding: 13px 0 11px 0;
+  padding: 12px 0;
 }
 
 .pagination-link:focus {
@@ -3272,31 +3269,34 @@ input.subscription-form-input:not(:placeholder-shown) {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: 128px;
   align-self: stretch;
 }
 
 .pagination-item-button.prev {
   margin-right: auto;
-  text-align: left;
+  width: 130px;
 }
 
 .pagination-item-button.next {
   margin-left: auto;
-  text-align: right;
+ width:140px;
 }
 
+
 .pagination-item-link {
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
   color: rgba(0, 0, 0, 1);
   display: block;
-  max-width: 128px;
-  padding: 21px 26px 20px 26px;
+  padding: 25px 20px;
   text-decoration: none;
-  text-transform: uppercase;
   overflow-wrap: break-word;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .pagination-item-link:focus {
