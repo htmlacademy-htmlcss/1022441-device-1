@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс - Каталог</title>
   <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -165,36 +167,36 @@
               <legend class="filter-title">Цвет</legend>
               <ul class="colors-list">
                 <li class="colors-list-item">
-                  <label class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" name="black" checked>
+                  <label for="black" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="black" name="black" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Черный</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
-                  <label class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" name="white">
+                  <label for="white" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="white" name="white">
                     <span class="control-mark"></span>
                     <span class="control-label">Белый</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
-                  <label class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" name="red" disabled checked>
+                  <label for="red" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="red" name="red" disabled checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Красный</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
-                  <label class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" name="blue" disabled>
+                  <label for="blue" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="blue" name="blue" disabled>
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
-                  <label class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" name="pink">
+                  <label for="pink" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="pink" name="pink">
                     <span class="control-mark"></span>
                     <span class="control-label">Розовый</span>
                   </label>
@@ -206,22 +208,21 @@
               <legend class="filter-title">Bluetooth</legend>
               <ul class="bluetooth-list">
                 <li class="bluetooth-list-item">
-                  <label class="bluetooth-list-item-control">
-                    <input class="visually-hidden control-input" type="radio" name="bluetooth-present" value="yes" checked>
+                  <label for="bluetooth-present" class="bluetooth-list-item-control">
+                    <input class="visually-hidden control-input" type="radio" id="bluetooth-present" name="bluetooth-present" value="yes" checked>
                     <span class="control-mark-radio"></span>
                     <span class="control-label">Есть</span>
                   </label>
                 </li>
                 <li class="bluetooth-list-item">
-                  <label class="bluetooth-list-item-control">
-                    <input class="visually-hidden control-input" type="radio" name="bluetooth-present" value="no" disabled>
+                  <label for="bluetooth-absent" class="bluetooth-list-item-control">
+                    <input class="visually-hidden control-input" type="radio" id="bluetooth-absent" name="bluetooth-absent" value="yes" disabled>
                     <span class="control-mark-radio"></span>
                     <span class="control-label">Нет</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-
             <button type="submit" formaction="https://echo.htmlacademy.ru" class="button-fade filter-button">Показать</button>
           </form>
         </div>

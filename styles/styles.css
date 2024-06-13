@@ -2235,7 +2235,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   display: none;
   z-index: 1;
   background: #000000;
-  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   width: 200px;
   padding: 20px;
   box-sizing: border-box;
@@ -2905,7 +2905,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .sorting-select {
-  width: unset; /*280px;*/
+  width: unset;
 }
 
 .select-control:focus {
