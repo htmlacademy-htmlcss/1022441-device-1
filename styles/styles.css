@@ -102,8 +102,7 @@ body {
   cursor: not-allowed;
 }
 
-.button-fade,
-.services-button {
+.button-fade {
   position: relative;
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -118,9 +117,6 @@ body {
   color: #000000;
   cursor: pointer;
   overflow-wrap: break-word;
-}
-
-.button-fade {
   z-index: 0;
   width: 220px;
   box-sizing: border-box;
@@ -1191,15 +1187,32 @@ body {
 
 .services-button {
   width: 160px;
-  padding: 7px 18px 8px 18px;
   box-sizing: border-box;
   text-decoration: none;
+  padding: 9px 16px 10px 20px;
 }
 
 .services-navigation-item.current .services-button {
+  box-sizing: border-box;
   width: 280px;
   background-color: #000000;
   color: #FFE17F;
+  border: none;
+  padding: 9px 133px 10px 16px;
+  /* text-align: left; */
+  position: relative;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .services-navigation-item.current .services-button:focus {
@@ -1233,7 +1246,7 @@ body {
   height: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 74px 0 0 117px;
+  padding: 73px 0 0 116px;
 }
 
 .services-description-item.current {
@@ -1259,7 +1272,7 @@ body {
 }
 
 .services-description-item-title {
-  margin: 0 0 32px 0;
+  margin: 0 0 34px 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -1271,7 +1284,8 @@ body {
 
 .services-description-item-text {
   display: block;
-  width: 460px;
+  width: 455px;
+  box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1279,7 +1293,7 @@ body {
   line-height: 30px;
   color: #444444;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0;
 }
 
 /***** Services List End *****/
@@ -1320,8 +1334,8 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
-  margin: 7px 0 0 4px;
-  padding: 0;
+  margin: 0;
+  padding: 4px 0 0 4px;
   display: block;
 }
 
@@ -1944,6 +1958,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   margin: auto;
   background-color: #ffffff;
   border: 10px #000000 solid;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .modal-header {
@@ -2163,14 +2178,16 @@ input.subscription-form-input:not(:placeholder-shown) {
   padding-top: 3px;
   margin-bottom: 14px;
   overflow-wrap: break-word;
+  letter-spacing: -0.02em;
 }
 
 .field-info {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   margin: 0;
-  padding: 0;
+  padding: 2px 0 0 0;
   color: #FF3D3D;
+  display: inline-block;
 }
 
 .modal-input.error {
@@ -2211,9 +2228,9 @@ input.subscription-form-input:not(:placeholder-shown) {
   display: none;
   z-index: 1;
   background: #000000;
-  box-shadow: 0 15px 30px rgb(0 0 0 / 30%);
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
   width: 200px;
-  padding: 21px 18px 23px 22px;
+  padding: 20px;
   box-sizing: border-box;
   transform: translate(-50%, 25px);
   text-align: left;
@@ -2257,7 +2274,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 .counter-button {
   box-sizing: border-box;
   border: none;
-  padding: 0;
+  padding: 3px 0 0 0;
   background-color: transparent;
   cursor: pointer;
 }
@@ -2309,9 +2326,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .send-button {
-  grid-column: 1;
-  column-span: 3;
-  grid-row: 3 / 4;
+  width: 200px;
 }
 
 /****** Modal window end *******/
