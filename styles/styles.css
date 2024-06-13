@@ -1189,19 +1189,18 @@ body {
   width: 160px;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 9px 16px 10px 20px;
+  padding: 9px 0 10px 0;
 }
 
 .services-navigation-item.current .services-button {
+  position: relative;
+  display: inline-block;
   box-sizing: border-box;
   width: 280px;
   background-color: #000000;
   color: #FFE17F;
   border: none;
   padding: 9px 133px 10px 16px;
-  /* text-align: left; */
-  position: relative;
-  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
