@@ -589,7 +589,8 @@ body {
 
 .cart-info-popup-total {
   display: grid;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: 130px 130px;
+  column-gap: 10px;
   list-style: none;
   margin: 0 20px 0 21px;
   padding: 0;
