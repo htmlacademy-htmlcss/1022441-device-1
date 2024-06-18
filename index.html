@@ -20,7 +20,7 @@
               <h2 class="visually-hidden">Форма поиска по сайту</h2>
               <div class="site-search-input-focus-wrapper">
                 <label class="visually-hidden" for="site-search-input">Поле для ввода текста поиска</label>
-                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Текст поиска" required>
+                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Поиск по сайту" required>
               </div>
               <div class="site-search-button-focus-wrapper">
                 <button class="site-search-button" type="submit">Найти</button>
@@ -39,7 +39,7 @@
               </div>
               <div class="cart-navigation-item active">
                 <a class="cart-navigation-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label" style="display: none">
                   <ul class="popup-cart-item">
                     <li>
                       <a href="#" class="popup-cart-item-link">
@@ -76,36 +76,30 @@
           <nav class="page-header-navigation">
             <h2 class="visually-hidden">Навигация по сайту</h2>
             <div class="catalog-menu">
-              <a class="catalog-link" href="./catalog.html">
+              <a class="catalog-link" href="#">
                 <span class="catalog-link-text">Каталог товаров</span>
                 <span class="catalog-link-icon"></span>
               </a>
-              <div class="dropdown-menu-container">
-                <ul class="dropdown-menu">
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link active" href="#">Моноподы для селфи</a>
-                  </li>
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link" href="#">Экшн-камеры</a>
-                  </li>
-                </ul>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link" href="#">Умные часы</a>
-                  </li>
-                </ul>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-menu-item">
-                    <a class="dropdown-menu-link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
+              <ul class="dropdown-menu-container">
+                <li class="dropdown-menu-item">
+                  <ul class="dropdown-menu-submenu">
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Виртуальная реальность</a></li>
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="./catalog.html">Моноподы для селфи</a></li>
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu-item">
+                  <ul class="dropdown-menu-submenu">
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Фитнес-браслеты</a></li>
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-menu-item">
+                  <ul class="dropdown-menu-submenu">
+                    <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="header-main-menu">
               <ul class="main-menu-navigation">
