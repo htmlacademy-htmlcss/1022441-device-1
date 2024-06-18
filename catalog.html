@@ -148,10 +148,14 @@
                 </div>
               </div>
               <div class="price-controls">
-                <label for="min-price" class="visually-hidden">Ползунок для нижнего порога цены</label>
-                <input id="min-price" class="min-price input-control" type="text" name="min-price" placeholder="от 0" required>
-                <label for="max-price" class="visually-hidden">Ползунок для верхнего порога цены</label>
-                <input id="max-price" class="max-price input-control" type="text" name="max-price" placeholder="до 5000" required>
+                <label for="min-price" aria-label="Ползунок для нижнего порога цены">
+                  от
+                  <input id="min-price" class="min-price input-control" type="text" name="min-price" placeholder="от 0" required>
+                </label>
+                <label for="max-price" aria-label="Ползунок для верхнего порога цены">
+                  до
+                  <input id="max-price" class="max-price input-control" type="text" name="max-price" placeholder="до 5000" required>
+                </label>
               </div>
             </fieldset>
 
@@ -318,9 +322,6 @@
       </div>
       <div class="footer-container-item1 address">
         <p class="footer-address">Санкт-Петербург, набережная <br>реки Карповки, 5, литера П.</p>
-      </div>
-      <div class="footer-container-item1 decor">
-        <div class="footer-decor-line"></div>
       </div>
       <div class="footer-container-item2 navigation">
         <ul class="footer-navigation-list">

@@ -1671,6 +1671,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .footer-container {
+  position: relative;
   display: grid;
   grid-template-columns: [c1] 1fr [c2] 2fr [c3] 1fr [c4];
   grid-template-rows: [r1] 62px [r2] auto [r3] auto [r4] auto [r5];
@@ -1679,6 +1680,17 @@ input.subscription-form-input:not(:placeholder-shown) {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+}
+
+.footer-container::before {
+  position: absolute;
+  bottom: 32px;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 7px;
+  margin:0;
+  background-color: #FFC700;
 }
 
 .footer-container-item1.logo {
@@ -1691,12 +1703,6 @@ input.subscription-form-input:not(:placeholder-shown) {
   grid-column-start: c1;
   grid-row-start: r3;
   padding-bottom: 10px;
-}
-
-.footer-container-item1.decor {
-  grid-column-start: c1;
-  grid-row-start: r4;
-  padding: 34px 0 0 0;
 }
 
 .footer-container-item2.navigation {
@@ -1747,13 +1753,6 @@ input.subscription-form-input:not(:placeholder-shown) {
 .footer-address {
   padding: 0;
   margin: 0 0 20px 0;
-}
-
-.footer-decor-line {
-  width: 80px;
-  height: 7px;
-  background-color: #FFC700;
-  margin:0;
 }
 
 .footer-navigation-list {
