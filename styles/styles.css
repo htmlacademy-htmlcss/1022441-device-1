@@ -1516,8 +1516,12 @@ body {
   padding: 0;
 }
 
+.phone:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .phone,
-.phone:focus,
 .phone:hover,
 .phone:active {
   color: #444444;
