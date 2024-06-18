@@ -707,7 +707,8 @@ body {
   display: inline-block;
 }
 
-.catalog-link-icon {
+.catalog-link::after {
+  content: "";
   display: inline-block;
   box-sizing: border-box;
   width: 50px;
@@ -720,13 +721,15 @@ body {
   background-position: center center;
 }
 
-.catalog-link:hover .catalog-link-icon,
-.catalog-link:active .catalog-link-icon{
+.catalog-link:hover::after,
+.catalog-link:active::after {
   opacity: 1;
 }
 
-.catalog.active .catalog-link-icon,
-.catalog-link:hover .catalog-link-icon {
+.catalog-link:hover::after,
+.catalog-link:focus::after,
+.catalog-menu:has(.dropdown-menu-container:hover) .catalog-link::after,
+.catalog-menu:has(.dropdown-menu-container:focus-within) .catalog-link::after {
   background-image: url("../images/icons/minus.svg");
 }
 
