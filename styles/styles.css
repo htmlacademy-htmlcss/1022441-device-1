@@ -1969,7 +1969,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   height: 33px;
 }
 
-.htmlacademy-link {
+.service-link {
   display: block;
   width: 115px;
   height: 33px;
@@ -1978,16 +1978,16 @@ input.subscription-form-input:not(:placeholder-shown) {
   padding: 0;
 }
 
-.htmlacademy-link:focus {
+.service-link:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.htmlacademy-link:hover {
+.service-link:hover {
   color: #FFFFFF;
 }
 
-.htmlacademy-link:active {
+.service-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
