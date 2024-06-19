@@ -1874,54 +1874,12 @@ input.subscription-form-input:not(:placeholder-shown) {
   align-items: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.button-socials .socials-icon {
   color: #444444;
-}
-
-.button-socials.telegram::after {
-  display: block;
-  content: '';
-  background-image: url("../images/icons/telegram.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  width: 12px;
-  height: 14px;
-}
-
-.button-socials.telegram:active::after {
-  background-image: url("../images/icons/telegram-active.svg");
-}
-
-.button-socials.youtube::after {
-  display: block;
-  content: '';
-  background-image: url("../images/icons/youtube.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  width: 16px;
-  height: 11px;
-}
-
-.button-socials.youtube:active::after {
-  background-image: url("../images/icons/youtube-active.svg");
-}
-
-.button-socials.twitter::after {
-  display: block;
-  content: '';
-  background-image: url("../images/icons/twitter.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  width: 15px;
-  height: 15px;
-}
-
-.button-socials.twitter:active::after {
-  background-image: url("../images/icons/twitter-active.svg");
 }
 
 .button-socials:focus {
@@ -1935,6 +1893,19 @@ input.subscription-form-input:not(:placeholder-shown) {
 
 .button-socials:hover {
   background-color: #FFC700;
+}
+
+.button-socials:hover .socials-icon {
+  color: #000000;
+}
+
+.button-socials:active {
+  background-color: #FFC700;
+}
+
+.button-socials:active .socials-icon {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .footer-phone {
@@ -2049,9 +2020,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   margin-top: 11px;
   border: none;
   cursor: pointer;
-  background-color: #ffffff;
-  background-image: url("../images/icons/close-26x26.svg");
-  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .modal-close-button:focus {
@@ -2059,12 +2028,14 @@ input.subscription-form-input:not(:placeholder-shown) {
   outline-offset: 2px;
 }
 
-.modal-close-button:hover {
-  background-image: url("../images/icons/close-hover-26x26.svg");
+.modal-close-button:hover .modal-close-icon {
+  color: #000000;
+  opacity: 0.6;
 }
 
-.modal-close-button:active {
-  background-image: url("../images/icons/close-active-26x26.svg");
+.modal-close-button:active .modal-close-icon {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .modal-delivery-form {
@@ -2113,6 +2084,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .modal-input {
+  position: relative;
   box-sizing: border-box;
   padding: 20px 45px 20px 20px;
   width: 360px;
@@ -2145,10 +2117,9 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .modal-input.error {
-  background-color: #F0F0F0;
-  padding: 18px 18px 18px 18px;
   border: 2px solid #FF3D3D;
   outline: none;
+  padding: 18px 45px 18px 20px;
 }
 
 .modal-input:disabled  {
@@ -2176,56 +2147,18 @@ input.subscription-form-input:not(:placeholder-shown) {
   cursor: pointer;
 }
 
-.delivery-form.name .field-icon {
-  background-image: url("../images/icons/login-active.svg");
-  background-position: right center;
+.modal-input.icon-name {
+  background-image: url("../images/icons/login-modal.svg");
+  background-position: right 20px center;
   background-repeat: no-repeat;
+
 }
 
-.delivery-form.name .modal-input:focus + .field-icon,
-.delivery-form.name .modal-input:not(:placeholder-shown) + .field-icon {
-  background-image: url("../images/icons/login-default.svg");
-}
-
-.delivery-form.name .modal-input:active + .field-icon,
-.delivery-form.name .modal-input:not(:placeholder-shown) + .field-icon {
-  background-image: url("../images/icons/login-default.svg");
-}
-
-.delivery-form.name .modal-input:active + .field-icon,
-.delivery-form.name .modal-input:hover + .field-icon {
-  background-image: url("../images/icons/login-hover.svg");
-}
-
-.delivery-form.name .modal-input:disabled + .field-icon {
-  background-image: url("../images/icons/login-active.svg");
-  opacity: 30%;
-}
-
-.delivery-form.mail .field-icon {
-  background-image: url("../images/icons/letter-active.svg");
-  background-position: right center;
+.modal-input.icon-mail {
+  background-image: url("../images/icons/mail-modal.svg");
+  background-position: right 20px center;
   background-repeat: no-repeat;
-}
 
-.delivery-form.mail .modal-input:focus + .field-icon,
-.delivery-form.mail .modal-input:not(:placeholder-shown) + .field-icon {
-  background-image: url("../images/icons/letter-default.svg");
-}
-
-.delivery-form.mail .modal-input:active + .field-icon,
-.delivery-form.mail .modal-input:not(:placeholder-shown) + .field-icon {
-  background-image: url("../images/icons/letter-default.svg");
-}
-
-.delivery-form.mail .modal-input:active + .field-icon,
-.delivery-form.mail .modal-input:hover + .field-icon {
-  background-image: url("../images/icons/letter-hover.svg");
-}
-
-.delivery-form.mail .modal-input:disabled + .field-icon {
-  background-image: url("../images/icons/letter-active.svg");
-  opacity: 30%;
 }
 
 .modal-label {
@@ -2246,10 +2179,6 @@ input.subscription-form-input:not(:placeholder-shown) {
   padding: 2px 0 0 0;
   color: #FF3D3D;
   display: inline-block;
-}
-
-.modal-input.error {
-  border-color: #FF3D3D;
 }
 
 .field-info.hide {
@@ -3008,18 +2937,15 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .select-control:hover {
-  background-image: url("../images/icons/dir-down-60.svg");
-  color: rgba(0,0,0,0.6)
+  opacity: 0.6;
 }
 
 .select-control:active {
-  background-image: url("../images/icons/dir-down-30.svg");
-  color: rgba(0,0,0,0.3);
+  opacity: 0.3;
 }
 
 .select-control:disabled {
-  background-image: url("../images/icons/dir-down-10.svg");
-  color: rgba(0, 0, 0, 0.1);
+  opacity: 0.1;
 }
 
 .select-control option {
