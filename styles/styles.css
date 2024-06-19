@@ -3002,7 +3002,8 @@ input.subscription-form-input:not(:placeholder-shown) {
   text-decoration: none;
 }
 
-.product-card-fade {
+.card-item::after {
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -3012,6 +3013,10 @@ input.subscription-form-input:not(:placeholder-shown) {
   background: rgba(240, 240, 240, 0.8);
   visibility: hidden;
   z-index: 200;
+}
+
+.card-item:hover::after {
+  visibility: visible;
 }
 
 .product-card-image {
