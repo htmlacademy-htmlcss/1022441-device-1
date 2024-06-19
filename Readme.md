@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Victoria Knyazeva](https://up.htmlacademy.ru/htmlcss-individual/1/user/1022441).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисенкова](https://htmlacademy.ru/profile/id85590).
 
 ---
 
