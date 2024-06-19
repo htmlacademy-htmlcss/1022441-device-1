@@ -3046,7 +3046,8 @@ input.subscription-form-input:not(:placeholder-shown) {
   display: grid;
   width: 360px;
   padding-top: 28px;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 205px auto;
+  column-gap: 20px;
   text-decoration: none;
 }
 
