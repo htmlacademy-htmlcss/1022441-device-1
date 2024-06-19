@@ -1369,15 +1369,33 @@ body {
   text-decoration: none;
 }
 
-.promo-image {
+.promo-link:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.promo-link:hover {
+  background-color: #F0F0F0;
+}
+
+.promo-link:active {
+  background-color: #F0F0F0;
+  opacity: 0.3;
+}
+
+.promo-link::before {
+  content: "";
   display: block;
   width: 125px;
   height: 100px;
   background-color: #FFE17F;
   background-image: url("../images/icons/truck.svg");
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center center;
+}
+
+.promo-link:hover::before {
+  background-color: #FFC700;
 }
 
 .promo-text {
@@ -1396,44 +1414,18 @@ body {
   display: block;
 }
 
-.promo-info {
-  display: block;
-  width: 40px;
-  height: 40px;
+.promo-link .promo-icon {
   margin-right: 43px;
   margin-left: 42px;
-  border-radius: 50%;
-  background-color: rgba(220, 220, 220, 0.5);
-  background-image: url("../images/icons/info-default.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  fill: #A1A1A1;
 }
 
-.promo-link:focus-within {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+.promo-link:hover .promo-icon {
+  fill: #000000;
 }
 
-.promo-link:hover .promo-image {
-  background-color: #FFC700;
-}
-
-.promo-link:hover .promo-info {
-  background-image: url("../images/icons/info-hover.svg");
-}
-
-.promo-link:active {
-  opacity: 0.3;
-}
-
-.promo-link:active .promo-image {
-  background-color: #FFC700;
-}
-
-.promo-link:active .promo-info {
-  background-image: url("../images/icons/info-hover.svg");
-  opacity: 1;
+.promo-link:active .promo-icon {
+  fill: #000000;
 }
 
 /***** Promo End *****/
