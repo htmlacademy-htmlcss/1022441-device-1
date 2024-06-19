@@ -28,7 +28,6 @@
         </form>
         <section class="user-navigation">
           <h2 class="visually-hidden">Меню авторизации на сайте</h2>
-          <a class="user-navigation-link logout hidden" href="#">Войти</a>
           <a class="user-navigation-link profile" href="#">Коля Петухов</a>
           <a class="user-navigation-link logout" href="#">Выйти</a>
         </section>
@@ -39,12 +38,12 @@
           </div>
           <div class="cart-navigation-item active">
             <a class="cart-navigation-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-            <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label" style="display: none">
+            <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
               <ul class="popup-cart-item">
                 <li>
                   <a href="#" class="popup-cart-item-link">
                     <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="44">
-                    <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
+                    <span class="popup-cart-item-text">Любительская селфи&#8209;палка</span>
                   </a>
                 </li>
                 <li class="popup-cart-item-delete">
@@ -55,7 +54,7 @@
                 <li>
                   <a href="#" class="popup-cart-item-link">
                     <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="44">
-                    <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
+                    <span class="popup-cart-item-text">Профессиональная селфи&#8209;палка</span>
                   </a>
                 </li>
                 <li class="popup-cart-item-delete">
@@ -76,34 +75,27 @@
         <div class="catalog-menu">
           <a class="catalog-link" href="#">
             <span class="catalog-link-text">Каталог товаров</span>
-            <span class="catalog-link-icon"></span>
           </a>
-          <div class="dropdown-menu-container">
-            <ul class="dropdown-menu">
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link active" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-            <ul class="dropdown-menu">
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link" href="#">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="dropdown-menu">
-              <li class="dropdown-menu-item">
-                <a class="dropdown-menu-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="dropdown-menu-container">
+            <li class="dropdown-menu-item">
+              <ul class="dropdown-menu-submenu">
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Виртуальная реальность</a></li>
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link current" href="#">Моноподы для селфи</a></li>
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Экшн-камеры</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-menu-item">
+              <ul class="dropdown-menu-submenu">
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Фитнес-браслеты</a></li>
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Умные часы</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-menu-item">
+              <ul class="dropdown-menu-submenu">
+                <li class="dropdown-submenu-item"><a class="dropdown-submenu-link" href="#">Квадрокоптеры</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="header-main-menu">
           <ul class="main-menu-navigation">
@@ -144,26 +136,27 @@
           <form class="catalog-form-filters" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter price-range">
               <legend class="filter-title">Стоимость</legend>
-              <div class="range-controls-box">
-                <div class="range-controls-wrapper">
-                  <div class="range-controls">
-                    <div class="scale-bar">
-                      <div class="scale-bar-active" style="width: 60%; margin-left: 0%"></div>
+                <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 120px">
+                      <button type="button" class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button type="button" class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
                     </div>
-                    <button type="button" class="tumbler tumbler-min" style="left: 0%"></button>
-                    <button type="button" class="tumbler tumbler-max" style="left: 60%"></button>
+                  </div>
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      от <input class="range-input" type="number" value="0" name="min-price">
+                    </label>
+                    <label class="catalog-filter-label">
+                      до <input class="range-input" type="number" value="5000" name="max-price">
+                    </label>
                   </div>
                 </div>
-              </div>
-              <div class="price-controls">
-                <label for="min-price" class="visually-hidden">Ползунок для нижнего порога цены</label>
-                <input id="min-price" class="min-price input-control" type="text" name="min-price" placeholder="от 0" required>
-                <label for="max-price" class="visually-hidden">Ползунок для верхнего порога цены</label>
-                <input id="max-price" class="max-price input-control" type="text" name="max-price" placeholder="до 5000" required>
-              </div>
             </fieldset>
-
-
             <fieldset class="filter colors">
               <legend class="filter-title">Цвет</legend>
               <ul class="colors-list">
@@ -245,10 +238,9 @@
               <a href="#" class="card-item">
                 <img class="product-card-image" src="images/photos/product-1.jpg" alt="Любительская селфи-палка." width="360" height="380">
                 <span class="product-card-info">
-                      <span class="product-card-title">Любительская<br>селфи-палка</span>
-                      <span class="product-card-price">500 ₽</span>
-                    </span>
-                <span class="product-card-fade"></span>
+                  <span class="product-card-title">Любительская&nbsp; селфи&ndash;палка&nbsp;</span>
+                  <span class="product-card-price">500&nbsp;₽</span>
+                </span>
               </a>
               <a href="./catalog/product-1.html" class="button-fade product-button">Подробнее</a>
             </li>
@@ -256,10 +248,9 @@
               <a href="#2" class="card-item">
                 <img class="product-card-image" src="images/photos/product-2.jpg" alt="Фотография профессиональной селфи-палки." width="360" height="380">
                 <span class="product-card-info">
-                      <span class="product-card-title">Профессиональная селфи-палка</span>
-                      <span class="product-card-price">1 500 ₽</span>
-                    </span>
-                <span class="product-card-fade"></span>
+                  <span class="product-card-title">Профессиональная селфи&ndash;палка</span>
+                  <span class="product-card-price">1&nbsp;500&nbsp;₽</span>
+                </span>
               </a>
               <a href="./catalog/product-2.html" class="button-fade product-button">Подробнее</a>
             </li>
@@ -267,10 +258,9 @@
               <a href="#3" class="card-item">
                 <img class="product-card-image" src="images/photos/product-3.jpg" alt="Фотография непотопляемой селфи-палки." width="360" height="380">
                 <span class="product-card-info">
-                      <span class="product-card-title">Непотопляемая<br>селфи-палка</span>
-                      <span class="product-card-price">2 500 ₽</span>
-                    </span>
-                <span class="product-card-fade"></span>
+                  <span class="product-card-title">Непотопляемая селфи&ndash;палка&nbsp;</span>
+                  <span class="product-card-price">2&nbsp;500&nbsp;₽</span>
+                </span>
               </a>
               <a href="./catalog/product-3.html" class="button-fade product-button">Подробнее</a>
             </li>
@@ -278,17 +268,14 @@
               <a href="#4" class="card-item">
                 <img class="product-card-image" src="images/photos/product-4.jpg" alt="Фотография селфи-палки «Следуй за мной»." width="360" height="380">
                 <span class="product-card-info">
-                      <span class="product-card-title">Селфи-палка «Следуй за мной»</span>
-                      <span class="product-card-price">1 500 ₽</span>
-                    </span>
-                <span class="product-card-fade"></span>
+                  <span class="product-card-title">Селфи-палка «Следуй за&nbsp;мной»</span>
+                  <span class="product-card-price">1&nbsp;500&nbsp;₽</span>
+                </span>
               </a>
               <a href="./catalog/product-4.html" class="button-fade product-button">Подробнее</a>
             </li>
-            <li class="catalog-more">
-              <button type="button" class="button download-more-button">Загрузить ещё</button>
-            </li>
           </ul>
+          <button type="button" class="button download-more-button">Загрузить ещё</button>
           <div class="pagination-container">
             <ul class="pagination">
               <li class="pagination-item-button prev disabled">
@@ -327,9 +314,6 @@
       <div class="footer-container-item1 address">
         <p class="footer-address">Санкт-Петербург, набережная <br>реки Карповки, 5, литера П.</p>
       </div>
-      <div class="footer-container-item1 decor">
-        <div class="footer-decor-line"></div>
-      </div>
       <div class="footer-container-item2 navigation">
         <ul class="footer-navigation-list">
           <li class="footer-navigation-item"><a class="footer-navigation-link" href="#">Доставка</a></li>
@@ -340,18 +324,36 @@
       <div class="footer-container-item2 socials">
         <ul class="footer-socials-list">
           <li class="footer-social-item">
-            <a class="button-socials telegram" href="https://t.me/htmlacademy">
+            <a class="button-socials" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
+              <svg class="socials-icon" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20"/>
+                <g fill="currentColor">
+                  <path d="M25.4431 14.0736L13.6231 18.6316C12.8164 18.9556 12.8211 19.4056 13.4751 19.6062L16.5097 20.5529L23.5311 16.1229C23.8631 15.9209 24.1664 16.0296 23.9171 16.2509L18.2284 21.3849H18.2271L18.2284 21.3856L18.0191 24.5136C18.3257 24.5136 18.4611 24.3729 18.6331 24.2069L20.1071 22.7736L23.1731 25.0382C23.7384 25.3496 24.1444 25.1896 24.2851 24.5149L26.2977 15.0296C26.5037 14.2036 25.9824 13.8296 25.4431 14.0736Z"/>
+                </g>
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button-socials youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
+              <svg class="socials-icon" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20"/>
+                <g fill="currentColor">
+                  <path d="M27.6671 16.6746C27.5765 16.3515 27.4 16.0589 27.1564 15.828C26.9059 15.59 26.5989 15.4197 26.2644 15.3333C25.0124 15.0033 19.9964 15.0033 19.9964 15.0033C17.9053 14.9795 15.8147 15.0842 13.7364 15.3166C13.4019 15.4094 13.0955 15.5835 12.8444 15.8233C12.5977 16.0606 12.4191 16.3533 12.3257 16.674C12.1015 17.8818 11.9926 19.1082 12.0004 20.3366C11.9924 21.564 12.1011 22.79 12.3257 23.9993C12.4171 24.3186 12.5951 24.61 12.8424 24.8453C13.0897 25.0806 13.3977 25.2506 13.7364 25.3406C15.0051 25.67 19.9964 25.67 19.9964 25.67C22.0902 25.6938 24.1835 25.5892 26.2644 25.3566C26.5989 25.2702 26.9059 25.1 27.1564 24.862C27.3999 24.6311 27.5762 24.3385 27.6664 24.0153C27.8965 22.8079 28.0083 21.581 28.0004 20.352C28.0177 19.1177 27.906 17.885 27.6671 16.674V16.6746ZM18.4017 22.6193V18.0546L22.5751 20.3373L18.4017 22.6193Z"/>
+                </g>
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button-socials twitter" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Twitter</span>
+              <svg class="socials-icon" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20"/>
+                <g fill="currentColor">
+                  <path d="M22.7 13.1551C24.2 12.6551 25.3 13.4551 25.9 14.2551C26.4 14.0551 27 13.8551 27.6 13.6551C27.6 14.4551 27.1 15.0551 26.8 15.2551C27.5 15.4551 28 14.8551 28 14.8551C27.9 15.7551 27.1 16.5551 26.6 16.7551C26.4 23.0551 23.8 27.1551 17.7 27.0551C17.2 27.0551 17.8 27.0551 17.3 27.0551C17 27.0551 13.6 26.6551 13 25.2551C15 25.4551 16.4 24.8551 17.1 24.1551C16.3 23.8551 14.7 23.7551 14.5 21.3551C14.8 21.5551 15 21.6551 15.6 21.5551C14.5 20.7551 13.3 20.0551 13.4 18.0551C13.7 18.3551 14.3 18.5551 14.6 18.4551C14 18.2551 12.8 15.3551 13.8 13.8551C15.4 15.5551 17.1 17.2551 20.1 17.3551C20.3 15.2551 21.1 13.8551 22.7 13.1551Z"/>
+                </g>
+              </svg>
             </a>
           </li>
         </ul>
@@ -360,7 +362,7 @@
         <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
       </div>
       <div class="footer-container-item3 htmlacademy">
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+        <a class="service-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">Сделано в .html academy</span>
           <svg class="htmlacademy-svg-area" role="img" aria-label="Логотип HTML Academy">
             <svg width="115" height="33" viewBox="0 0 115 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
