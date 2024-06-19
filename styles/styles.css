@@ -2441,7 +2441,7 @@ input.subscription-form-input:not(:placeholder-shown) {
 .filter.price-range {
   width: 220px;
   box-sizing: border-box;
-  margin: 0 0 33px 0;
+  margin: 0 0 34px 0;
   padding: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -2473,51 +2473,36 @@ input.subscription-form-input:not(:placeholder-shown) {
 
 
 /******* Range Control ********/
-.range-controls-box {
-  padding: 0 0 0 13px;
-}
-.range-controls-wrapper {
-  position: relative;
-  margin: 0 -9px;
-  padding: 0 9px;
-  width: 200px;
+
+.range {
+  padding: 8px 0 0 14px;
   box-sizing: border-box;
 }
 
-.range-controls {
+.range-scale {
   position: relative;
-  min-height: 18px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 8px 0;
-  border-radius: 2px;
-  width: 200px;
-}
-
-.scale-bar {
   height: 2px;
+  width: 200px;
   background-color: #DCDCDC;
+  border-radius: 2px;
 }
 
-.scale-bar-active {
+.range-bar {
+  position: absolute;
   height: 2px;
   background-color: #000000;
 }
 
-.tumbler {
+.range-toggle {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 18px;
   height: 18px;
-  margin: 0 -9px;
-  padding: 0;
-  border: none;
   box-sizing: border-box;
+  border: none;
   cursor: pointer;
 }
 
-.tumbler:before {
+.range-toggle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2531,39 +2516,66 @@ input.subscription-form-input:not(:placeholder-shown) {
   cursor: pointer;
 }
 
-.tumbler:focus {
+.range-toggle:hover::before {
+  opacity: 0.5;
+}
+
+.range-toggle:focus {
   outline: 2px #AF4FFF solid;
   outline-offset: 2px;
 }
 
-.tumbler:hover:before {
-  border-color: #797979;
-  background-color: #EEEEEE;
+.range-toggle:focus:active {
+  outline: none;
 }
 
-.tumbler:active:before {
-  border-color: #000000;
+.range-toggle:active::before,
+.range-toggle:hover:active::before {
+  opacity: 1;
   background-color: #000000;
+  border-color: #000000;
 }
 
-.tumbler-min {
-  left: 18px;
+.toggle-min {
+  top: -8px;
+  left: -10px;
 }
 
-.tumbler-max {
-  left: 160px;
+.toggle-max {
+  top: -8px;
+  right: -8px;
 }
 
-.price-controls {
-  width: 200px;
+.range-wrapper-inputs {
+  position: relative;
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 4px;
+  grid-template-columns: 40% 40%;
+  gap: 13%;
+  width: 200px;
+  margin: 12px 0 0 -14px;
 }
 
-.min-price,
-.max-price {
-  margin-top: 3px;
+.catalog-filter-label {
+  display: flex;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+
+.catalog-filter-label:focus-within {
+  outline: 2px #AF4FFF solid;
+  outline-offset: 2px;
+}
+.range-input:focus {
+  outline-width: 0;
+}
+.range-input {
+  max-width: 50px;
+  appearance: textfield;
   height: 18px;
   border: none;
   font-family: 'Rubik', sans-serif;
@@ -2572,30 +2584,17 @@ input.subscription-form-input:not(:placeholder-shown) {
   font-size: 14px;
   line-height: 18px;
   text-align: left;
-  color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
-  padding: 2px 0;
+  margin-left: 4px;
+  padding: 1px 0 0 0;
   padding-inline-start: 0;
+  color: rgba(0,0,0,0.3);
 }
 
-.min-price::placeholder,
-.max-price::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.min-price:not(:placeholder-shown),
-.max-price:not(:placeholder-shown) {
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.min-price:focus,
-.max-price:focus {
-  outline: 2px solid #AF4FFF;
-}
-
-.min-price:hover::placeholder,
-.max-price:hover::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 /******* Range Control End ********/

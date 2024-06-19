@@ -135,30 +135,27 @@
           <form class="catalog-form-filters" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter price-range">
               <legend class="filter-title">Стоимость</legend>
-              <div class="range-controls-box">
-                <div class="range-controls-wrapper">
-                  <div class="range-controls">
-                    <div class="scale-bar">
-                      <div class="scale-bar-active" style="width: 60%; margin-left: 0%"></div>
+                <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 120px">
+                      <button type="button" class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button type="button" class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
                     </div>
-                    <button type="button" class="tumbler tumbler-min" style="left: 0%"></button>
-                    <button type="button" class="tumbler tumbler-max" style="left: 60%"></button>
+                  </div>
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      от <input class="range-input" type="number" value="0" name="min-price">
+                    </label>
+                    <label class="catalog-filter-label">
+                      до <input class="range-input" type="number" value="5000" name="max-price">
+                    </label>
                   </div>
                 </div>
-              </div>
-              <div class="price-controls">
-                <label for="min-price" aria-label="Ползунок для нижнего порога цены">
-                  от
-                  <input id="min-price" class="min-price input-control" type="text" name="min-price" placeholder="от 0" required>
-                </label>
-                <label for="max-price" aria-label="Ползунок для верхнего порога цены">
-                  до
-                  <input id="max-price" class="max-price input-control" type="text" name="max-price" placeholder="до 5000" required>
-                </label>
-              </div>
             </fieldset>
-
-
             <fieldset class="filter colors">
               <legend class="filter-title">Цвет</legend>
               <ul class="colors-list">
