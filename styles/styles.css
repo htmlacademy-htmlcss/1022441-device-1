@@ -278,7 +278,7 @@ body {
 }
 
 .site-search-input:hover {
-  background-color: #FFCC33;
+  background-color: transparent;
 }
 
 .site-search-input::placeholder {
