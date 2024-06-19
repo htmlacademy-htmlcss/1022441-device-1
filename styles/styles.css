@@ -1708,14 +1708,16 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .footer-container::before {
-  position: absolute;
-  bottom: 32px;
+  grid-column-start: c1;
+  grid-row-start: r4;
   content: "";
   display: block;
   width: 80px;
   height: 7px;
   margin:0;
   background-color: #FFC700;
+  align-self: center;
+  justify-self: start;
 }
 
 .footer-container-item1.logo {
@@ -1755,6 +1757,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   text-align: right;
   justify-self: end;
   padding: 20px 1px 0 0;
+  align-self: center;
 }
 
 .page-footer-logo {
