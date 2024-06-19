@@ -2359,15 +2359,15 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .breadcrumbs-link {
-  display: block;
+  display: inline-block;
   font-family: inherit;
   color: inherit;
   text-decoration: none;
 }
 
-.breadcrumbs-link:focus,
-.breadcrumbs-link:focus-within {
-  outline: none;
+.breadcrumbs-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .breadcrumbs-link:hover {
@@ -2378,16 +2378,16 @@ input.subscription-form-input:not(:placeholder-shown) {
   opacity: 0.5;
 }
 
-.breadcrumbs-item:not(:first-child) a::before {
+.breadcrumbs-item:not(:first-child)::before {
   display: inline-block;
-  content: ' ';
+  content: "";
   background-image: url("../images/icons/arrow-right.svg");
   background-repeat: no-repeat;
   background-position-y: 0;
   background-position-x: 0;
   width: 4px;
   height: 10px;
-  margin-right: 16px;
+  margin-right: 13px;
   margin-left: 5px;
 }
 
