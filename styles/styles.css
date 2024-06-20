@@ -37,30 +37,22 @@
   overflow: hidden;
 }
 
-html, body {
-  box-sizing: border-box;
+html {
   height: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   font-style: normal;
-  background-color: #FFFFFF;
   color: #444444;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin: 0 auto;
-  min-height: 100%;
-  background-color: #FFFFFF;
 }
 
 /* Site Buttons */
@@ -892,6 +884,10 @@ body {
   position: relative;
   width: 1160px;
   margin: 0 auto 71px;
+}
+
+.slider-control {
+  position: relative;
 }
 
 .slider-control::before {
