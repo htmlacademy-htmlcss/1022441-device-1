@@ -164,21 +164,21 @@
                 </li>
                 <li class="colors-list-item">
                   <label for="white" class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" id="white" name="white">
+                    <input class="visually-hidden control-input" type="checkbox" id="white" name="white" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Белый</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
                   <label for="red" class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" id="red" name="red" disabled checked>
+                    <input class="visually-hidden control-input" type="checkbox" id="red" name="red">
                     <span class="control-mark"></span>
                     <span class="control-label">Красный</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
                   <label for="blue" class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" id="blue" name="blue" disabled>
+                    <input class="visually-hidden control-input" type="checkbox" id="blue" name="blue">
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
                   </label>
@@ -197,15 +197,15 @@
               <legend class="filter-title">Bluetooth</legend>
               <ul class="bluetooth-list">
                 <li class="bluetooth-list-item">
-                  <label for="bluetooth-present" class="bluetooth-list-item-control">
-                    <input class="visually-hidden control-input" type="radio" id="bluetooth-present" name="bluetooth-present" value="yes" checked>
+                  <label for="bluetooth-yes" class="bluetooth-list-item-control">
+                    <input class="visually-hidden control-input" type="radio" id="bluetooth-yes" name="bluetooth-group" value="yes" checked>
                     <span class="control-mark-radio"></span>
                     <span class="control-label">Есть</span>
                   </label>
                 </li>
                 <li class="bluetooth-list-item">
-                  <label for="bluetooth-absent" class="bluetooth-list-item-control">
-                    <input class="visually-hidden control-input" type="radio" id="bluetooth-absent" name="bluetooth-absent" value="yes" disabled>
+                  <label for="bluetooth-no" class="bluetooth-list-item-control">
+                    <input class="visually-hidden control-input" type="radio" id="bluetooth-no" name="bluetooth-group" value="no">
                     <span class="control-mark-radio"></span>
                     <span class="control-label">Нет</span>
                   </label>
@@ -280,10 +280,10 @@
               <li class="pagination-item-button prev disabled">
                 <a class="pagination-item-link" href="#">назад</a>
               </li>
-              <li class="pagination-item">
+              <li class="pagination-item current">
                 <a class="pagination-link" href="#">1</a>
               </li>
-              <li class="pagination-item current">
+              <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
               </li>
               <li class="pagination-item">
