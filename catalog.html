@@ -170,17 +170,17 @@
                   </label>
                 </li>
                 <li class="colors-list-item">
-                  <label for="red" class="colors-list-item-control">
-                    <input class="visually-hidden control-input" type="checkbox" id="red" name="red">
-                    <span class="control-mark"></span>
-                    <span class="control-label">Красный</span>
-                  </label>
-                </li>
-                <li class="colors-list-item">
                   <label for="blue" class="colors-list-item-control">
                     <input class="visually-hidden control-input" type="checkbox" id="blue" name="blue">
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
+                  </label>
+                </li>
+                <li class="colors-list-item">
+                  <label for="red" class="colors-list-item-control">
+                    <input class="visually-hidden control-input" type="checkbox" id="red" name="red">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Красный</span>
                   </label>
                 </li>
                 <li class="colors-list-item">
@@ -276,12 +276,10 @@
           </ul>
           <button type="button" class="button download-more-button">Загрузить ещё</button>
           <div class="pagination-container">
+            <a class="pagination-list-button prev disabled" href="#">назад</a>
             <ul class="pagination">
-              <li class="pagination-item-button prev disabled">
-                <a class="pagination-item-link" href="#">назад</a>
-              </li>
-              <li class="pagination-item current">
-                <a class="pagination-link" href="#">1</a>
+              <li class="pagination-item">
+                <a class="pagination-link current" href="#">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
@@ -295,10 +293,8 @@
               <li class="pagination-item">
                 <a class="pagination-link" href="#">15</a>
               </li>
-              <li class="pagination-item-button next">
-                <a class="pagination-item-link" href="#">вперёд</a>
-              </li>
             </ul>
+            <a class="pagination-list-button next" href="#">вперёд</a>
           </div>
         </div>
       </div>

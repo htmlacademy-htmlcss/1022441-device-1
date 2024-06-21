@@ -3231,29 +3231,36 @@ input.subscription-form-input:not(:placeholder-shown) {
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.download-more-button:disabled,
-.download-more-button[disabled]:hover {
+.download-more-button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
   border: 3px solid #c4c4c4;
   background-color: #f0f0f0;
+  outline: none;
+  filter: none;
 }
+
 /******* Catalog Pagination Start **********/
 
 .pagination-container {
   display: flex;
   box-sizing: border-box;
-  max-width: 760px;
+  width: 760px;
   background-color: #ebebeb;
   margin: 44px auto 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  row-gap: 10px;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
+  width: 490px;
+  box-sizing: border-box;
   justify-content: center;
 }
 
@@ -3280,6 +3287,9 @@ input.subscription-form-input:not(:placeholder-shown) {
 
 .pagination-link {
   display: block;
+  min-width: 40px;
+  max-width: 200px;
+  min-height: 40px;
   box-sizing: border-box;
   text-align: center;
   font-family: "Rubik", sans-serif;
@@ -3288,11 +3298,12 @@ input.subscription-form-input:not(:placeholder-shown) {
   line-height: 16px;
   text-decoration: none;
   color: rgba(68, 68, 68, 0.3);
-  width: 40px;
-  padding: 12px 0;
+  padding: 12px;
+  overflow-wrap: break-word;
 }
 
-.pagination-link:focus {
+.pagination-link:focus,
+.pagination-link.current:focus {
   outline: 2px solid #af4fff;
   color: rgba(68, 68, 68, 0.3);
 }
@@ -3305,47 +3316,28 @@ input.subscription-form-input:not(:placeholder-shown) {
   color: rgba(68, 68, 68, 0.1);
 }
 
-.pagination-item.current {
+.pagination-link.current {
   color: rgba(68, 68, 68, 0.6);
+  cursor: default;
 }
 
-.pagination-item.current:focus-within {
+.pagination-link.current:focus-within {
   background-color: transparent;
 }
 
-.pagination-item.current .pagination-link,
-.pagination-item.current:focus-within .pagination-link{
+.pagination-link.current,
+.pagination-item:focus-within .pagination-link.current {
   color: rgba(68, 68, 68, 0.6);
-  cursor: not-allowed;
 }
 
-.pagination-item:last-child {
-  background-color: transparent;
-}
+/**********************************/
 
-.pagination-item-button {
-  background-color: #ebebeb;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-self: stretch;
-}
-
-.pagination-item-button.prev {
-  margin-right: auto;
-  width: 130px;
-}
-
-.pagination-item-button.next {
-  margin-left: auto;
-  width:140px;
-}
-
-
-.pagination-item-link {
-  color: #000000;
-  display: block;
+.pagination-list-button {
   padding: 25px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  color: #000000;
+  background-color: #ebebeb;
   text-decoration: none;
   overflow-wrap: break-word;
   font-family: "Raleway", sans-serif;
@@ -3358,28 +3350,41 @@ input.subscription-form-input:not(:placeholder-shown) {
   text-align: center;
 }
 
-.pagination-item-link:focus {
+.pagination-list-button.prev {
+  margin-right: auto;
+  width: 130px;
+}
+
+.pagination-list-button.next {
+  margin-left: auto;
+  width:140px;
+}
+
+.pagination-list-button:focus {
   background-color: #dcdcdc;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
-.pagination-item-link:hover {
+.pagination-list-button:hover {
   background-color: #dcdcdc;
 }
 
-.pagination-item-link:active {
+.pagination-list-button:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #dcdcdc;
 }
 
-.pagination-item-button.prev.disabled .pagination-item-link,
-.pagination-item-button.next.disabled .pagination-item-link {
+.pagination-list-button.disabled {
   background-color: #ebebeb;
   color: rgba(68, 68, 68, 0.3);
   cursor: not-allowed;
-
 }
+
+.pagination-list-button.disabled:focus {
+  outline: none;
+}
+
 /******* Catalog Pagination End **********/
 
 /****** Catalog End ******/
