@@ -1268,7 +1268,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 287px;
   width: 287px;
   box-sizing: border-box;
   margin: 0;
@@ -1285,7 +1284,7 @@ body {
 .services-navigation-item {
   width: 100%;
   margin: 0 0 35px 0;
-  padding: 0;
+  padding: 0 0 0 2px;
   text-align: left;
 }
 
@@ -1304,13 +1303,13 @@ body {
   background-color: #000000;
   color: #ffe17f;
   border: none;
-  padding: 9px 133px 10px 16px;
+  padding: 9px 126px 10px 16px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -1319,6 +1318,7 @@ body {
 }
 
 .services-navigation-item.current .services-button:focus {
+  text-align: right;
   outline: unset;
 }
 
@@ -1328,10 +1328,12 @@ body {
 }
 
 .services-navigation-item.current .services-button:hover {
+  text-align: right;
   color: rgba(255, 225, 127, 0.5);
 }
 
 .services-navigation-item.current .services-button:active {
+  text-align: right;
   color: rgba(255, 225, 127, 0.3);
 }
 
@@ -2548,6 +2550,11 @@ input.subscription-form-input:not(:placeholder-shown) {
   cursor: pointer;
 }
 
+.range-toggle:disabled {
+  background-color: #efefef;
+  cursor: not-allowed;
+}
+
 .range-toggle::before {
   content: "";
   position: absolute;
@@ -2560,6 +2567,15 @@ input.subscription-form-input:not(:placeholder-shown) {
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
+}
+
+.range-toggle:disabled::before {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
+.range-toggle:disabled:hover::before {
+  opacity: 0.1;
 }
 
 .range-toggle:hover::before {
