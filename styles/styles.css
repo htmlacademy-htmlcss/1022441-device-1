@@ -2002,16 +2002,18 @@ input.subscription-form-input:not(:placeholder-shown) {
   height: 33px;
   color: #ffc700;
   margin: 0 0 20px 0;
-  padding: 0;
+  padding: 0;;
 }
+
 
 .service-link:focus {
   outline: 2px solid #af4fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .service-link:hover {
   color: #ffffff;
+  fill: #ffffff;
 }
 
 .service-link:active {
@@ -2556,6 +2558,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   box-sizing: border-box;
   border: none;
   cursor: pointer;
+  background-color: #f0f0f0;
 }
 
 .range-toggle:disabled {
