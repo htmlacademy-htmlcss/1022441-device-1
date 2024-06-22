@@ -546,6 +546,7 @@ body {
 .cart-item-link {
   display: grid;
   grid-template-columns: 39px auto;
+  grid-template-rows: 44px auto;
   column-gap: 14px;
   align-content: start;
   justify-items: start;
@@ -555,17 +556,17 @@ body {
 
 .cart-item-image {
   grid-column: 1 / 2;
-  grid-row: 1;
+  grid-row: 1 / 2;
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 .cart-item-title {
   grid-column: 2 / 3;
-  grid-row: 1;
+  grid-row: 1 / 3;
   inline-size: 188px;
   overflow-wrap: break-word;
   box-sizing: border-box;
@@ -970,10 +971,12 @@ body {
 .slider-item {
   display: none;
   grid-template-columns: 560px 560px;
+  grid-template-rows: 560px auto;
   column-gap: 40px;
 }
 
 .slider-info-container {
+  grid-row: 1 / 3;
   position: relative;
   z-index: 1;
 }
@@ -994,8 +997,12 @@ body {
 }
 
 .slider-item-image {
+  grid-row: 1 / 2;
   display: block;
   z-index: 100;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 .slider-item-title {
@@ -1199,27 +1206,27 @@ body {
   background-repeat: no-repeat;
 }
 
-.categories-item:nth-child(1) .categories-item-link::before {
+.categories-item.virtual-realities .categories-item-link::before {
   background-image: url("../images/icons/categories/category-1.svg");
 }
 
-.categories-item:nth-child(2) .categories-item-link::before {
+.categories-item.selfies-monopods .categories-item-link::before {
   background-image: url("../images/icons/categories/category-2.svg");
 }
 
-.categories-item:nth-child(3) .categories-item-link::before {
+.categories-item.action-cameras .categories-item-link::before {
   background-image: url("../images/icons/categories/category-3.svg");
 }
 
-.categories-item:nth-child(4) .categories-item-link::before {
+.categories-item.fitness-bracelets .categories-item-link::before {
   background-image: url("../images/icons/categories/category-4.svg");
 }
 
-.categories-item:nth-child(5) .categories-item-link::before {
+.categories-item.smart-watches .categories-item-link::before {
   background-image: url("../images/icons/categories/category-5.svg");
 }
 
-.categories-item:nth-child(6) .categories-item-link::before {
+.categories-item.quadrocopters .categories-item-link::before {
   background-image: url("../images/icons/categories/category-6.svg");
 }
 
@@ -1896,6 +1903,8 @@ input.subscription-form-input:not(:placeholder-shown) {
   margin-bottom: 0;
 }
 
+/******* Footer Socials Start *******/
+
 .footer-socials {
   display: flex;
   justify-content: space-between;
@@ -1930,8 +1939,30 @@ input.subscription-form-input:not(:placeholder-shown) {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.button-socials .socials-icon {
-  color: #444444;
+.button-socials::after {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.button-socials.telegram::after {
+  background-image: url("../images/icons/telegram.svg");
+  width: 14px;
+  height: 12px;
+}
+
+.button-socials.youtube::after {
+  background-image: url("../images/icons/youtube.svg");
+  width: 16px;
+  height: 11px;
+}
+
+.button-socials.twitter::after {
+  background-image: url("../images/icons/twitter.svg");
+  width: 15px;
+  height: 15px;
 }
 
 .button-socials:focus {
@@ -1947,18 +1978,14 @@ input.subscription-form-input:not(:placeholder-shown) {
   background-color: #ffc700;
 }
 
-.button-socials:hover .socials-icon {
-  color: #000000;
-}
-
 .button-socials:active {
   background-color: #ffc700;
 }
 
-.button-socials:active .socials-icon {
-  color: #000000;
+.button-socials:active::after {
   opacity: 0.3;
 }
+/******* Footer Socials End *******/
 
 .footer-phone {
   display: inline-block;
@@ -1995,16 +2022,18 @@ input.subscription-form-input:not(:placeholder-shown) {
   height: 33px;
   color: #ffc700;
   margin: 0 0 20px 0;
-  padding: 0;
+  padding: 0;;
 }
+
 
 .service-link:focus {
   outline: 2px solid #af4fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .service-link:hover {
   color: #ffffff;
+  fill: #ffffff;
 }
 
 .service-link:active {
@@ -2549,6 +2578,7 @@ input.subscription-form-input:not(:placeholder-shown) {
   box-sizing: border-box;
   border: none;
   cursor: pointer;
+  background-color: #f0f0f0;
 }
 
 .range-toggle:disabled {
@@ -3054,7 +3084,8 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .card-item {
-  display: block;
+  display: grid;
+  grid-template-rows: 380px auto;
   position: relative;
   width: 360px;
   box-sizing: border-box;
@@ -3084,9 +3115,9 @@ input.subscription-form-input:not(:placeholder-shown) {
 }
 
 .product-card-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 .product-button:focus {
