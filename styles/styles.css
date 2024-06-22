@@ -1903,6 +1903,8 @@ input.subscription-form-input:not(:placeholder-shown) {
   margin-bottom: 0;
 }
 
+/******* Footer Socials Start *******/
+
 .footer-socials {
   display: flex;
   justify-content: space-between;
@@ -1937,8 +1939,30 @@ input.subscription-form-input:not(:placeholder-shown) {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.button-socials .socials-icon {
-  color: #444444;
+.button-socials::after {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.button-socials.telegram::after {
+  background-image: url("../images/icons/telegram.svg");
+  width: 14px;
+  height: 12px;
+}
+
+.button-socials.youtube::after {
+  background-image: url("../images/icons/youtube.svg");
+  width: 16px;
+  height: 11px;
+}
+
+.button-socials.twitter::after {
+  background-image: url("../images/icons/twitter.svg");
+  width: 15px;
+  height: 15px;
 }
 
 .button-socials:focus {
@@ -1954,18 +1978,14 @@ input.subscription-form-input:not(:placeholder-shown) {
   background-color: #ffc700;
 }
 
-.button-socials:hover .socials-icon {
-  color: #000000;
-}
-
 .button-socials:active {
   background-color: #ffc700;
 }
 
-.button-socials:active .socials-icon {
-  color: #000000;
+.button-socials:active::after {
   opacity: 0.3;
 }
+/******* Footer Socials End *******/
 
 .footer-phone {
   display: inline-block;
